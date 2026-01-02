@@ -1,0 +1,14 @@
+{
+    "name": "mehdi-portfolio",
+    "version": "1.0.0",
+    "description": "Personal Portfolio of Mehdi Lakhouane",
+    "author": "Mehdi Lakhouane <Mehdilakhouane24@gmail.com>",
+    "license": "MIT",
+    "homepage": "https://mehdi-lakhouane-portfolio.vercel.app/",
+    "keywords": [
+        "portfolio",
+        "web development",
+        "strassenbauer",
+        "software developer"
+    ]
+}
