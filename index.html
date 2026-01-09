@@ -6,23 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mehdi Lakhouane | Portfolio</title>
     <meta name="description"
-        content="Portfolio of Mehdi Lakhouane - Certified Road Construction Specialist & Aspiring Software Developer.">
+        content="Portfolio of Mehdi Lakhouane - Certified Road Construction Specialist & Aspiring Software Developer based in Frankfurt. View projects in Web Dev, Python & Game Dev.">
+    <meta name="keywords"
+        content="Mehdi Lakhouane, Road Construction Specialist, Strassenbauer, Software Developer, Web Developer, Frankfurt, Portfolio, Python, Godot, Asphalt Calculator">
+    <link rel="canonical" href="https://mehdi-portfolio-kappa.vercel.app/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://mehdi-lakhouane-portfolio.vercel.app/">
+    <meta property="og:url" content="https://mehdi-portfolio-kappa.vercel.app/">
     <meta property="og:title" content="Mehdi Lakhouane | Portfolio">
     <meta property="og:description"
         content="Certified Road Construction Specialist turned Aspiring Software Developer. View my projects and journey.">
-    <meta property="og:image" content="images/Mehdi.jpg">
+    <meta property="og:image" content="https://mehdi-portfolio-kappa.vercel.app/images/Mehdi.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://mehdi-lakhouane-portfolio.vercel.app/">
+    <meta property="twitter:url" content="https://mehdi-portfolio-kappa.vercel.app/">
     <meta property="twitter:title" content="Mehdi Lakhouane | Portfolio">
     <meta property="twitter:description"
         content="Certified Road Construction Specialist turned Aspiring Software Developer. View my projects and journey.">
-    <meta property="twitter:image" content="images/Mehdi.jpg">
+    <meta property="twitter:image" content="https://mehdi-portfolio-kappa.vercel.app/images/Mehdi.jpg">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/favicon.png">
@@ -33,6 +36,28 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+
+    <!-- JSON-LD Structured Data for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Mehdi Lakhouane",
+      "url": "https://mehdi-portfolio-kappa.vercel.app/",
+      "image": "https://mehdi-portfolio-kappa.vercel.app/images/Mehdi.jpg",
+      "jobTitle": ["Road Construction Specialist", "Software Developer"],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Frankfurt am Main",
+        "addressCountry": "Germany"
+      },
+      "sameAs": [
+        "https://github.com/Amazigh24"
+      ],
+      "knowsAbout": ["Road Construction", "Asphalt", "Web Development", "Python", "Game Development", "Godot"],
+      "alumniOf": "Ausbildung Strassenbauer"
+    }
+    </script>
 </head>
 
 <body>
@@ -62,9 +87,9 @@
         <section class="hero" id="home">
             <div class="hero-content">
                 <span class="badge">Based in Frankfurt am Main, Germany 🇩🇪</span>
-                <h1>Building the Future,<br> <span class="highlight">Layer by Layer</span></h1>
-                <p class="subtitle">Certified Road Construction Specialist (Strassenbauer) turned Aspiring Software
-                    Developer.</p>
+                <h1>Hi, I'm Mehdi Lakhouane.<br> <span class="highlight">Building the Future, Layer by Layer</span></h1>
+                <p class="subtitle">I build smart desktop tools for real-world problems — like preventing rebar errors
+                    before concrete is poured.</p>
                 <div class="hero-tags">
                     <span><i class="fas fa-hard-hat"></i> Construction</span>
                     <span><i class="fas fa-code"></i> Software</span>
@@ -90,16 +115,12 @@
                 <h2 class="section-title">About Me</h2>
                 <div class="about-grid">
                     <div class="about-text">
-                        <p>My name is <strong>Mehdi Lakhouane</strong>, a Moroccan living in Germany for over two years.
-                            I am a certified <strong>Strassenbauer</strong>, having successfully completed my Ausbildung
-                            in road construction, and I currently work in the field.</p>
-                        <p>Alongside my professional career, I am actively building a transition into software
-                            development and technology through self-learning and real projects.</p>
+                        <p>My name is <strong>Mehdi Lakhouane</strong>, a Moroccan living in Germany since 2018.
+                            I am a certified <strong>Strassenbauer</strong>, but my passion lies in technology.</p>
+                        <p>I focus on practical software that solves overlooked real-world problems — especially in
+                            construction and field operations.</p>
                         <p>What makes my profile unique is the combination of verified vocational training, hands-on
-                            construction experience, an academic background in English Literature, and practical
-                            software development skills.</p>
-                        <p>I understand real-world systems — both physical and digital — and I enjoy transforming
-                            practical problems into structured, logical solutions.</p>
+                            construction experience, and the ability to build custom digital tools.</p>
                     </div>
                     <div class="about-stats">
                         <div class="stat-card">
@@ -114,8 +135,8 @@
                         </div>
                         <div class="stat-card">
                             <i class="fas fa-language"></i>
-                            <h3>Trilingual</h3>
-                            <p>EN, AR, TMA (DE learning)</p>
+                            <h3>Multilingual</h3>
+                            <p>EN, AR, TMA, FR (DE learning)</p>
                         </div>
                     </div>
                 </div>
@@ -196,24 +217,26 @@
         <!-- Technical Skills -->
         <section id="skills" class="section alt-bg">
             <div class="container">
-                <h2 class="section-title">Technical Skills</h2>
+                <h2 class="section-title">Tech Stack & Skills</h2>
                 <div class="skills-grid">
                     <div class="skill-category">
-                        <h3><i class="fas fa-code"></i> Web Development</h3>
+                        <h3><i class="fas fa-desktop"></i> Software Development</h3>
                         <div class="skill-list">
-                            <span class="skill-tag">HTML</span>
-                            <span class="skill-tag">CSS</span>
-                            <span class="skill-tag">JavaScript</span>
-                            <span class="skill-tag">Vercel</span>
-                            <span class="skill-tag">Responsive Design</span>
+                            <span class="skill-tag">Python 3.13</span>
+                            <span class="skill-tag">OpenCV & NumPy</span>
+                            <span class="skill-tag">Tkinter / sv_ttk</span>
+                            <span class="skill-tag">PyInstaller</span>
+                            <span class="skill-tag">Desktop GUI Arch</span>
                         </div>
                     </div>
                     <div class="skill-category">
-                        <h3><i class="fas fa-terminal"></i> Programming</h3>
+                        <h3><i class="fas fa-shield-alt"></i> Web & Security</h3>
                         <div class="skill-list">
-                            <span class="skill-tag">Python (Learning)</span>
-                            <span class="skill-tag">Problem Solving</span>
-                            <span class="skill-tag">Logic & Algorithms</span>
+                            <span class="skill-tag">HTML5 & CSS3</span>
+                            <span class="skill-tag">Web Security (CSP, SRI)</span>
+                            <span class="skill-tag">Security Headers</span>
+                            <span class="skill-tag">Vercel Deployment</span>
+                            <span class="skill-tag">Responsive Design</span>
                         </div>
                     </div>
                     <div class="skill-category">
@@ -221,25 +244,48 @@
                         <div class="skill-list">
                             <span class="skill-tag">Godot Engine</span>
                             <span class="skill-tag">GDScript</span>
-                            <span class="skill-tag">Physics/Collisions</span>
-                            <span class="skill-tag">Scene Systems</span>
+                            <span class="skill-tag">Game Physics</span>
+                            <span class="skill-tag">State Machines</span>
                         </div>
                     </div>
                     <div class="skill-category">
-                        <h3><i class="fas fa-robot"></i> AI & Experiments</h3>
-                        <div class="skill-list">
-                            <span class="skill-tag">AI Prototypes</span>
-                            <span class="skill-tag">LLM Exploration</span>
-                            <span class="skill-tag">Mistral</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3><i class="fas fa-tools"></i> Tools</h3>
+                        <h3><i class="fas fa-tools"></i> Tools & Workflow</h3>
                         <div class="skill-list">
                             <span class="skill-tag">Git & GitHub</span>
                             <span class="skill-tag">VS Code</span>
-                            <span class="skill-tag">Godot Editor</span>
+                            <span class="skill-tag">AI Integration (LLMs)</span>
+                            <span class="skill-tag">Command Line (CLI)</span>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- From Trench to Tech Section -->
+        <section id="trench-to-tech" class="section">
+            <div class="container">
+                <h2 class="section-title">From Trench to Tech</h2>
+                <div class="trench-tech-grid">
+                    <div class="tt-visual">
+                        <img src="images/trench-gear.png" alt="Construction Work Gear on Site" class="tt-img">
+                        <div class="tt-label">
+                            <h3>The Trench</h3>
+                            <p>Real-world chaos, mud, and deadlines.</p>
+                        </div>
+                    </div>
+                    <div class="tt-visual">
+                        <img src="images/tech-alert.png" alt="GrabenGeist Critical Alert Interface" class="tt-img">
+                        <div class="tt-label">
+                            <h3>The Tech</h3>
+                            <p>Digital precision, safety, and control.</p>
+                        </div>
+                    </div>
+                    <div class="tt-connector">
+                        <p>
+                            My hands-on experience allows me to build software that actually works for people wearing
+                            gloves and standing in the mud. I bridge the gap between heavy machinery and high-level
+                            code.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -250,7 +296,83 @@
             <div class="container">
                 <h2 class="section-title">Projects</h2>
                 <div class="projects-grid">
-                    <!-- Project 1: Asphalt Calculator -->
+                    <!-- Project New: GrabenGeist -->
+                    <article class="project-card main-project">
+                        <div class="project-content">
+                            <h3>🛡️ GrabenGeist</h3>
+                            <div class="project-badges">
+                                <span class="badge-pill">Construction</span>
+                                <span class="badge-pill">In Progress</span>
+                            </div>
+                            <p class="project-description">
+                                A specialized tool for construction safety and management. Currently in active
+                                development, bringing digital precision to trench work.
+                            </p>
+                            <ul class="project-features">
+                                <li>Safety Monitoring</li>
+                                <li>Real-time Data</li>
+                                <li>Construction Logistics</li>
+                            </ul>
+                            <!-- Link placeholder - hidden until url is available
+                            <div class="project-links">
+                                <a href="#" class="btn small primary">View Project</a>
+                            </div>
+                            -->
+                        </div>
+                    </article>
+
+                    <!-- Project Awal: Awal Dictionary -->
+                    <article class="project-card featured-project">
+                        <div class="project-content">
+                            <h3>ⵣ Awal Dictionary</h3>
+                            <div class="project-badges">
+                                <span class="badge-pill">PWA</span>
+                                <span class="badge-pill">Cultural Tech</span>
+                            </div>
+                            <p class="project-description">
+                                A comprehensive digital dictionary for the Tamazight language (Zaouiat Ahansal dialect).
+                                Built as a high-performance PWA that works offline and installs on any device.
+                            </p>
+                            <ul class="project-features">
+                                <li>Fast Search Algorithm</li>
+                                <li>Root Explorer</li>
+                                <li>Offline Capable (PWA)</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://awal-dictionary.web.app/" target="_blank" rel="noopener noreferrer"
+                                    class="btn small primary"><i class="fas fa-external-link-alt"></i> Open App</a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Project 1: RebarSight -->
+                    <article class="project-card featured-project">
+                        <div class="project-content">
+                            <h3>🔍 RebarSight</h3>
+                            <div class="project-badges">
+                                <span class="badge-pill">🏗️ Tested on real sites</span>
+                                <span class="badge-pill">🖥️ Windows Native</span>
+                            </div>
+                            <div class="psr-grid">
+                                <p><strong>Problem:</strong> Contractors lay rebar by eye — errors cause $10k+ rework.
+                                </p>
+                                <p><strong>Solution:</strong> An offline Windows app that verifies spacing from a single
+                                    photo.</p>
+                                <p><strong>Result:</strong> Detects violations in <60 seconds — no internet, no BIM
+                                        needed.</p>
+                            </div>
+                            <ul class="project-features">
+                                <li>Python 3.13 & OpenCV</li>
+                                <li>No Installation Required</li>
+                                <li>Automated PDF Reports</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com/Amazigh24" target="_blank" rel="noopener noreferrer"
+                                    class="btn small secondary"><i class="fab fa-github"></i> View on GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: Asphalt Calculator -->
                     <article class="project-card featured">
                         <div class="project-content">
                             <h3>🚧 Asphalt Calculator</h3>
@@ -270,12 +392,12 @@
                         </div>
                     </article>
 
-                    <!-- Project 2: Game Dev -->
+                    <!-- Project 3: Game Dev -->
                     <article class="project-card">
                         <div class="project-content">
-                            <h3>🎮 Game Dev Prototypes (Godot)</h3>
-                            <p class="project-description">Developed multiple prototypes to master core game mechanics
-                                like movement, physics, and state management.</p>
+                            <h3>🎮 Game Development Projects (Godot)</h3>
+                            <p class="project-description">Built and fully finished multiple game projects,
+                                demonstrating complete lifecycle development from concept to polish.</p>
                             <ul class="project-features">
                                 <li>Movement Systems</li>
                                 <li>Physics & Collisions</li>
@@ -288,7 +410,7 @@
                         </div>
                     </article>
 
-                    <!-- Project 3: AI Learning -->
+                    <!-- Project 4: AI Learning -->
                     <article class="project-card">
                         <div class="project-content">
                             <h3>🤖 AI Learning Projects</h3>
@@ -319,6 +441,10 @@
                     </div>
                     <div class="lang-item">
                         <span class="lang-name">English</span>
+                        <span class="lang-level">Advanced</span>
+                    </div>
+                    <div class="lang-item">
+                        <span class="lang-name">French</span>
                         <span class="lang-level">Advanced</span>
                     </div>
                     <div class="lang-item">
@@ -354,15 +480,28 @@
             </div>
         </section>
 
+        <!-- Behind the Build -->
+        <section id="story" class="section alt-bg">
+            <div class="container">
+                <h2 class="section-title">Behind the Build</h2>
+                <div class="story-content">
+                    <blockquote>
+                        "I built RebarSight because I saw a contractor break out concrete due to rebar spacing errors.
+                        4 weeks later — it’s ready."
+                    </blockquote>
+                    <p>This isn't just code; it's a solution born from dust, noise, and real deadlines.
+                        I bridge the gap between the construction site and the IDE.</p>
+                </div>
+            </div>
+        </section>
+
         <!-- Contact Section -->
         <section id="contact" class="section footer-section">
             <div class="container">
-                <h2 class="section-title">Get In Touch</h2>
+                <h2 class="section-title">Let's Build Something Useful</h2>
                 <div class="contact-card">
-                    <a href="#" class="contact-link" id="email-link" data-user="Mehdilakhouane24"
-                        data-domain="gmail.com">
-                        <i class="fas fa-envelope"></i>
-                        <span>Click to Show Email</span>
+                    <a href="mailto:Mehdilakhouane24@gmail.com" class="btn primary cta-btn">
+                        ✉️ Send me an Email
                     </a>
                     <a href="https://github.com/Amazigh24" target="_blank" rel="noopener noreferrer"
                         class="contact-link">
