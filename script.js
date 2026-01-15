@@ -77,3 +77,25 @@ if (emailLink) {
         emailLink.querySelector('span').textContent = email;
     });
 }
+
+// Ghost Mode Interaction
+const ghostBtn = document.getElementById('ghost-mode-btn');
+const body = document.body;
+
+if (ghostBtn) {
+    ghostBtn.addEventListener('click', () => {
+        // Toggle the glitch class
+        body.classList.toggle('glitch-active');
+
+        // Update button text accordingly
+        if (body.classList.contains('glitch-active')) {
+            ghostBtn.textContent = "👻 RETURN";
+            ghostBtn.style.color = "red";
+            ghostBtn.style.borderColor = "red";
+        } else {
+            ghostBtn.textContent = "👻 Ghost Mode";
+            ghostBtn.style.color = ""; // Reset to CSS default
+            ghostBtn.style.borderColor = "";
+        }
+    });
+}
