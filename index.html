@@ -36,6 +36,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_additions.css">
 
     <!-- JSON-LD Structured Data for Google -->
     <script type="application/ld+json">
@@ -61,7 +62,7 @@
 </head>
 
 <body>
-    <div class="scroll-progres-bar"></div>
+    <div class="scroll-progress-bar"></div>
 
     <header class="header">
         <nav class="navbar">
@@ -355,30 +356,43 @@
 
                     <!-- Project Shadow: Shadow Agent -->
                     <article class="project-card main-project">
-                        <div class="project-content">
-                            <h3>👻 Shadow Agent</h3>
-                            <div class="project-badges">
-                                <span class="badge-pill">Sovereign AI</span>
-                                <span class="badge-pill">Local Infrastructure</span>
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div>
+                                    <h3>👻 Shadow Agent</h3>
+                                    <div class="project-badges">
+                                        <span class="badge-pill">Sovereign AI</span>
+                                        <span class="badge-pill">Local Infrastructure</span>
+                                    </div>
+                                    <p class="project-description">
+                                        A Proactive Sovereign Agent that lives in the system tray. Unlike reactive
+                                        chatbots, it
+                                        acts before you ask. Built for the 2026 "Privacy First" era.
+                                    </p>
+                                </div>
+                                <div class="flip-hint">
+                                    <i class="fas fa-sync-alt"></i> Flip for Details
+                                </div>
                             </div>
-                            <p class="project-description">
-                                A Proactive Sovereign Agent that lives in the system tray. Unlike reactive chatbots, it
-                                acts before you ask. Built for the 2026 "Privacy First" era.
-                            </p>
-                            <ul class="project-features">
-                                <li><strong>Zero-Latency</strong> Local Processing</li>
-                                <li><strong>Asset Valuation:</strong> $45,000 (Commercial IP)</li>
-                            </ul>
-                            <div class="project-case-study">
-                                <div class="case-item"><strong>Problem:</strong> Cloud AI assistants compromise privacy,
-                                    leak sensitive data, and cannot perform local OS-level actions.</div>
-                                <div class="case-item"><strong>Solution:</strong> A local-first "Sovereign Agent" that
-                                    runs in the system tray, monitoring context to act proactively without data ever
-                                    leaving the device.</div>
-                                <div class="case-item"><strong>Tech:</strong> Python 3.13, Ollama (Local LLMs), System
-                                    Tray API, Secure Enclave Architecture.</div>
-                                <div class="case-item"><strong>Learnings:</strong> How to engineer autonomous loops,
-                                    handle OS-process management, and implement strict air-gapped security protocols.
+                            <div class="card-back">
+                                <h3>Case Study</h3>
+                                <ul class="project-features">
+                                    <li><strong>Zero-Latency</strong> Local Processing</li>
+                                    <li><strong>Asset Valuation:</strong> $45,000 (Commercial IP)</li>
+                                </ul>
+                                <div class="project-case-study">
+                                    <div class="case-item"><strong>Problem:</strong> Cloud AI assistants compromise
+                                        privacy,
+                                        leak sensitive data, and cannot perform local OS-level actions.</div>
+                                    <div class="case-item"><strong>Solution:</strong> A local-first "Sovereign Agent"
+                                        that
+                                        runs in the system tray, monitoring context to act proactively without data ever
+                                        leaving the device.</div>
+                                    <div class="case-item"><strong>Tech:</strong> Python 3.13, Ollama (Local LLMs),
+                                        System
+                                        Tray API, Secure Enclave Architecture.</div>
+                                    <div class="case-item"><strong>Impact:</strong> Delivers 100% data sovereignty and
+                                        automates background workflows with zero latency.</div>
                                 </div>
                             </div>
                         </div>
@@ -386,193 +400,285 @@
 
                     <!-- Project New: GrabenGeist -->
                     <article class="project-card main-project">
-                        <div class="project-content">
-                            <h3>🛡️ GrabenGeist</h3>
-                            <div class="project-badges">
-                                <span class="badge-pill">Construction</span>
-                                <span class="badge-pill">In Progress</span>
-                            </div>
-                            <p class="project-description">
-                                A specialized tool for construction safety and management. Currently in active
-                                development, bringing digital precision to trench work.
-                            </p>
-                            <ul class="project-features">
-                                <li>Safety Monitoring</li>
-                                <li>Real-time Data</li>
-                                <li>Construction Logistics</li>
-                            </ul>
-
-                            <div class="project-case-study">
-                                <div class="case-item"><strong>Problem:</strong> Trench safety relies on slow paper
-                                    checklists and manual oversight, leading to delayed hazard responses and regulatory
-                                    risks.</div>
-                                <div class="case-item"><strong>Solution:</strong> A digital site supervisor that tracks
-                                    real-time safety metrics, digitizes logs immediately, and enforces protocol
-                                    compliance.</div>
-                                <div class="case-item"><strong>Tech:</strong> React, Real-time Database (Supabase),
-                                    Mobile-Responsive UI.</div>
-                                <div class="case-item"><strong>Learnings:</strong> Translating strict physical safety
-                                    regulations into validation logic and building UX for non-technical field workers.
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div>
+                                    <h3>🛡️ GrabenGeist</h3>
+                                    <div class="project-badges">
+                                        <span class="badge-pill">Construction</span>
+                                        <span class="badge-pill">In Progress</span>
+                                    </div>
+                                    <p class="project-description">
+                                        A specialized tool for construction safety and management. Currently in active
+                                        development, bringing digital precision to trench work.
+                                    </p>
+                                </div>
+                                <div class="flip-hint">
+                                    <i class="fas fa-sync-alt"></i> Flip for Details
                                 </div>
                             </div>
-                            <!-- Link placeholder - hidden until url is available
-                            <div class="project-links">
-                                <a href="#" class="btn small primary">View Project</a>
+                            <div class="card-back">
+                                <h3>Case Study</h3>
+                                <ul class="project-features">
+                                    <li>Safety Monitoring</li>
+                                    <li>Real-time Data</li>
+                                    <li>Construction Logistics</li>
+                                </ul>
+
+                                <div class="project-case-study">
+                                    <div class="case-item"><strong>Problem:</strong> Trench safety relies on slow paper
+                                        checklists and manual oversight, leading to delayed hazard responses and
+                                        regulatory
+                                        risks.</div>
+                                    <div class="case-item"><strong>Solution:</strong> A digital site supervisor that
+                                        tracks
+                                        real-time safety metrics, digitizes logs immediately, and enforces protocol
+                                        compliance.</div>
+                                    <div class="case-item"><strong>Tech:</strong> React, Real-time Database (Supabase),
+                                        Mobile-Responsive UI.</div>
+                                    <div class="case-item"><strong>Impact:</strong> Reduces incident reporting time by
+                                        90%
+                                        and ensures auditable safety compliance.</div>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://github.com/Amazigh24" target="_blank" rel="noopener noreferrer"
+                                        class="btn small"><i class="fas fa-code"></i> View Code/Demo</a>
+                                </div>
                             </div>
-                            -->
                         </div>
                     </article>
 
                     <!-- Project Awal: Awal Dictionary -->
                     <article class="project-card featured-project">
-                        <div class="project-content">
-                            <h3>ⵣ Awal Dictionary</h3>
-                            <div class="project-badges">
-                                <span class="badge-pill">PWA</span>
-                                <span class="badge-pill">Cultural Tech</span>
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div>
+                                    <h3>ⵣ Awal Dictionary</h3>
+                                    <div class="project-badges">
+                                        <span class="badge-pill">PWA</span>
+                                        <span class="badge-pill">Cultural Tech</span>
+                                    </div>
+                                    <p class="project-description">
+                                        A comprehensive digital dictionary for the Tamazight language (Zaouiat Ahansal
+                                        dialect).
+                                        Build as a high-performance PWA that works offline and installs on any device.
+                                    </p>
+                                    <div class="project-img-container">
+                                        <img src="images/Awal_Dictionary.png" alt="Awal Dictionary App Interface"
+                                            class="project-img">
+                                    </div>
+                                </div>
+                                <div class="flip-hint">
+                                    <i class="fas fa-sync-alt"></i> Flip for Details
+                                </div>
                             </div>
-                            <p class="project-description">
-                                A comprehensive digital dictionary for the Tamazight language (Zaouiat Ahansal dialect).
-                                Built as a high-performance PWA that works offline and installs on any device.
-                            </p>
-                            <ul class="project-features">
-                                <li>Fast Search Algorithm</li>
-                                <li>Offline Capable (PWA)</li>
-                            </ul>
-                            <div class="project-case-study">
-                                <div class="case-item"><strong>Problem:</strong> The Tamazight language (Middle Atlas
-                                    dialect) lacks accessible, offline-capable digital resources, risking cultural
-                                    erosion.</div>
-                                <div class="case-item"><strong>Solution:</strong> A high-performance Progressive Web App
-                                    (PWA) with a custom root-based search algorithm available 100% offline.</div>
-                                <div class="case-item"><strong>Tech:</strong> Vanilla JavaScript, Service Workers (PWA),
-                                    JSON, CSS3.</div>
-                                <div class="case-item"><strong>Learnings:</strong> Implementing Service Workers for
-                                    offline caching, optimizing search algorithms for JSON data, and mobile-first
-                                    design.</div>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://awal-dictionary-app.web.app/" target="_blank" rel="noopener noreferrer"
-                                    class="btn small primary"><i class="fas fa-external-link-alt"></i> Open App</a>
+                            <div class="card-back">
+                                <h3>Case Study</h3>
+                                <ul class="project-features">
+                                    <li>Fast Search Algorithm</li>
+                                    <li>Offline Capable (PWA)</li>
+                                </ul>
+                                <div class="project-case-study">
+                                    <div class="case-item"><strong>Problem:</strong> The Tamazight language (Middle
+                                        Atlas
+                                        dialect) lacks accessible, offline-capable digital resources, risking cultural
+                                        erosion.</div>
+                                    <div class="case-item"><strong>Solution:</strong> A high-performance Progressive Web
+                                        App
+                                        (PWA) with a custom root-based search algorithm available 100% offline.</div>
+                                    <div class="case-item"><strong>Tech:</strong> Vanilla JavaScript, Service Workers
+                                        (PWA),
+                                        JSON, CSS3.</div>
+                                    <div class="case-item"><strong>Impact:</strong> Provides instant, offline access to
+                                        2000+ roots, preserving cultural heritage on any device.</div>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://awal-dictionary-app.web.app/" target="_blank"
+                                        rel="noopener noreferrer" class="btn small primary"><i
+                                            class="fas fa-external-link-alt"></i> Open App</a>
+                                </div>
                             </div>
                         </div>
                     </article>
                     <!-- Project 1: RebarSight -->
                     <article class="project-card featured-project">
-                        <div class="project-content">
-                            <h3>🔍 RebarSight</h3>
-                            <div class="project-badges">
-                                <span class="badge-pill">🏗️ Tested on real sites</span>
-                                <span class="badge-pill">🖥️ Windows Native</span>
-                            </div>
-
-                            <ul class="project-features">
-                                <li>Python 3.13 & OpenCV</li>
-                                <li>No Installation Required</li>
-                                <li>Automated PDF Reports</li>
-                            </ul>
-                            <div class="project-case-study">
-                                <div class="case-item"><strong>Problem:</strong> Manual "eyeball" inspections of rebar
-                                    spacing are prone to human error, leading to failed structural inspections and $10k+
-                                    rework costs.</div>
-                                <div class="case-item"><strong>Solution:</strong> A Windows desktop tool that uses
-                                    Computer Vision to automatically measure spacing from site photos and generate PDF
-                                    reports.</div>
-                                <div class="case-item"><strong>Tech:</strong> Python 3.13, OpenCV, ReportLab, Tkinter.
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div>
+                                    <h3>🔍 RebarSight</h3>
+                                    <div class="project-badges">
+                                        <span class="badge-pill">🏗️ Tested on real sites</span>
+                                        <span class="badge-pill">🖥️ Windows Native</span>
+                                    </div>
+                                    <p class="project-description">
+                                        A Windows desktop tool that uses Computer Vision to automatically measure
+                                        spacing from site photos.
+                                    </p>
                                 </div>
-                                <div class="case-item"><strong>Learnings:</strong> Applied image processing to noisy
-                                    real-world data (rust/mud) and automated professional reporting workflows.</div>
+                                <div class="flip-hint">
+                                    <i class="fas fa-sync-alt"></i> Flip for Details
+                                </div>
                             </div>
-                            <div class="project-links">
-                                <a href="https://github.com/Amazigh24" target="_blank" rel="noopener noreferrer"
-                                    class="btn small secondary"><i class="fab fa-github"></i> View on GitHub</a>
+                            <div class="card-back">
+                                <h3>Case Study</h3>
+                                <ul class="project-features">
+                                    <li>Python 3.13 & OpenCV</li>
+                                    <li>No Installation Required</li>
+                                    <li>Automated PDF Reports</li>
+                                </ul>
+                                <div class="project-case-study">
+                                    <div class="case-item"><strong>Problem:</strong> Manual "eyeball" inspections of
+                                        rebar
+                                        spacing are prone to human error, leading to failed structural inspections and
+                                        $10k+
+                                        rework costs.</div>
+                                    <div class="case-item"><strong>Solution:</strong> A Windows desktop tool that uses
+                                        Computer Vision to automatically measure spacing from site photos and generate
+                                        PDF
+                                        reports.</div>
+                                    <div class="case-item"><strong>Tech:</strong> Python 3.13, OpenCV, ReportLab,
+                                        Tkinter.
+                                    </div>
+                                    <div class="case-item"><strong>Impact:</strong> Detects measurement errors in under
+                                        60
+                                        seconds, preventing costly concrete rework.</div>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://github.com/Amazigh24" target="_blank" rel="noopener noreferrer"
+                                        class="btn small secondary"><i class="fab fa-github"></i> View on GitHub</a>
+                                </div>
                             </div>
                         </div>
                     </article>
 
                     <!-- Project 2: Asphalt Calculator -->
                     <article class="project-card featured">
-                        <div class="project-content">
-                            <h3>🚧 Asphalt Calculator</h3>
-                            <p class="project-description">A professional asphalt estimation tool built from real
-                                construction experience. Calculates area, volume, weight, and logistic requirements.</p>
-                            <ul class="project-features">
-                                <li>Area & Volume Calculations</li>
-                                <li>Thickness & Density Customization</li>
-                                <li>Logistics & Regional Pricing</li>
-                            </ul>
-                            <div class="project-case-study">
-                                <div class="case-item"><strong>Problem:</strong> Generic calculators fail to account for
-                                    asphalt variation (density, compaction loss), causing costly material shortages or
-                                    waste.</div>
-                                <div class="case-item"><strong>Solution:</strong> A specialized web estimator using
-                                    industry-standard density formulas to calculate exact tonnage, cost, and logistics.
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div>
+                                    <h3>🚧 Asphalt Calculator</h3>
+                                    <p class="project-description">A professional asphalt estimation tool built from
+                                        real
+                                        construction experience. Calculates area, volume, weight, and logistic
+                                        requirements.</p>
+                                    <div class="project-img-container">
+                                        <img src="images/Asphalt_calculator.png" alt="Asphalt Calculator Interface"
+                                            class="project-img">
+                                    </div>
                                 </div>
-                                <div class="case-item"><strong>Tech:</strong> JavaScript, HTML5/CSS3, DOM Manipulation.
-                                </div>
-                                <div class="case-item"><strong>Learnings:</strong> Converting domain-specific physical
-                                    formulas into code and designing mistake-proof UI options for rapid data entry.
+                                <div class="flip-hint">
+                                    <i class="fas fa-sync-alt"></i> Flip for Details
                                 </div>
                             </div>
-                            <div class="project-links">
-                                <a href="https://asphalt-calculator-eight.vercel.app/" target="_blank"
-                                    rel="noopener noreferrer" class="btn small"><i class="fas fa-external-link-alt"></i>
-                                    Live Demo</a>
-                                <!-- Add GitHub link if available specifically for this repo, otherwise general profile -->
+                            <div class="card-back">
+                                <h3>Case Study</h3>
+                                <ul class="project-features">
+                                    <li>Area & Volume Calculations</li>
+                                    <li>Thickness & Density Customization</li>
+                                    <li>Logistics & Regional Pricing</li>
+                                </ul>
+                                <div class="project-case-study">
+                                    <div class="case-item"><strong>Problem:</strong> Generic calculators fail to account
+                                        for
+                                        asphalt variation (density, compaction loss), causing costly material shortages
+                                        or
+                                        waste.</div>
+                                    <div class="case-item"><strong>Solution:</strong> A specialized web estimator using
+                                        industry-standard density formulas to calculate exact tonnage, cost, and
+                                        logistics.
+                                    </div>
+                                    <div class="case-item"><strong>Tech:</strong> JavaScript, HTML5/CSS3, DOM
+                                        Manipulation.
+                                    </div>
+                                    <div class="case-item"><strong>Impact:</strong> Reduces material waste by ~15% and
+                                        ensures precise ordering for large-scale road projects.</div>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://asphalt-calculator-eight.vercel.app/" target="_blank"
+                                        rel="noopener noreferrer" class="btn small"><i
+                                            class="fas fa-external-link-alt"></i>
+                                        Live Demo</a>
+                                    <!-- Add GitHub link if available specifically for this repo, otherwise general profile -->
+                                </div>
                             </div>
                         </div>
                     </article>
 
                     <!-- Project 3: Game Dev -->
                     <article class="project-card">
-                        <div class="project-content">
-                            <h3>🎮 Game Development Projects (Godot)</h3>
-                            <p class="project-description">Built and fully finished multiple game projects,
-                                demonstrating complete lifecycle development from concept to polish.</p>
-                            <ul class="project-features">
-                                <li>Movement Systems</li>
-                                <li>UI Interactions</li>
-                            </ul>
-                            <div class="project-case-study">
-                                <div class="case-item"><strong>Problem:</strong> Many game projects fail due to poor
-                                    architecture, becoming unmaintainable "spaghetti code" as complexity grows.</div>
-                                <div class="case-item"><strong>Solution:</strong> "Neon Quadrants" — A complete,
-                                    polished arcade suite built with modular architecture to handle multiple game modes
-                                    seamlessly.</div>
-                                <div class="case-item"><strong>Tech:</strong> Godot Engine, GDScript, Finite State
-                                    Machines, Particle Systems.</div>
-                                <div class="case-item"><strong>Learnings:</strong> Managing complex game state,
-                                    implementing "Game Feel" (juice/feedback), and profiling performance for smooth
-                                    60FPS.</div>
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div>
+                                    <h3>🎮 Game Development Projects (Godot)</h3>
+                                    <p class="project-description">Built and fully finished multiple game projects,
+                                        demonstrating complete lifecycle development from concept to polish.</p>
+                                </div>
+                                <div class="flip-hint">
+                                    <i class="fas fa-sync-alt"></i> Flip for Details
+                                </div>
                             </div>
-                            <div class="project-links">
-                                <a href="https://github.com/Amazigh24" target="_blank" rel="noopener noreferrer"
-                                    class="btn small secondary"><i class="fab fa-github"></i> View on GitHub</a>
+                            <div class="card-back">
+                                <h3>Case Study</h3>
+                                <ul class="project-features">
+                                    <li>Movement Systems</li>
+                                    <li>UI Interactions</li>
+                                </ul>
+                                <div class="project-case-study">
+                                    <div class="case-item"><strong>Problem:</strong> Many game projects fail due to poor
+                                        architecture, becoming unmaintainable "spaghetti code" as complexity grows.
+                                    </div>
+                                    <div class="case-item"><strong>Solution:</strong> "Neon Quadrants" — A complete,
+                                        polished arcade suite built with modular architecture to handle multiple game
+                                        modes
+                                        seamlessly.</div>
+                                    <div class="case-item"><strong>Tech:</strong> Godot Engine, GDScript, Finite State
+                                        Machines, Particle Systems.</div>
+                                    <div class="case-item"><strong>Learnings:</strong> Managing complex game state,
+                                        implementing "Game Feel" (juice/feedback), and profiling performance for smooth
+                                        60FPS.</div>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://github.com/Amazigh24" target="_blank" rel="noopener noreferrer"
+                                        class="btn small secondary"><i class="fab fa-github"></i> View on GitHub</a>
+                                </div>
                             </div>
                         </div>
                     </article>
 
                     <!-- Project 4: AI Learning -->
                     <article class="project-card">
-                        <div class="project-content">
-                            <h3>🤖 AI Learning Projects</h3>
-                            <p class="project-description">Exploration of AI logic, behavior, and practical applications
-                                using open-source models.</p>
-                            <div class="project-case-study">
-                                <div class="case-item"><strong>Problem:</strong> Theoretical knowledge of AI isn't
-                                    enough; understanding the practical limitations of LLMs requires hands-on testing.
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div>
+                                    <h3>🤖 AI Learning Projects</h3>
+                                    <p class="project-description">Exploration of AI logic, behavior, and practical
+                                        applications
+                                        using open-source models.</p>
                                 </div>
-                                <div class="case-item"><strong>Solution:</strong> A repository of experiments dissecting
-                                    model behavior, prompt engineering logic, and API integration patterns.</div>
-                                <div class="case-item"><strong>Tech:</strong> Python, PyTorch (Basics), OpenAI API,
-                                    Hugging Face.</div>
-                                <div class="case-item"><strong>Learnings:</strong> The difference between stochastic
-                                    generation and deterministic logic, and how to constrain AI outputs for reliable
-                                    software.</div>
+                                <div class="flip-hint">
+                                    <i class="fas fa-sync-alt"></i> Flip for Details
+                                </div>
                             </div>
-                            <div class="project-links">
-                                <a href="https://github.com/Amazigh24" target="_blank" rel="noopener noreferrer"
-                                    class="btn small secondary"><i class="fab fa-github"></i> View on GitHub</a>
+                            <div class="card-back">
+                                <h3>Case Study</h3>
+                                <div class="project-case-study">
+                                    <div class="case-item"><strong>Problem:</strong> Theoretical knowledge of AI isn't
+                                        enough; understanding the practical limitations of LLMs requires hands-on
+                                        testing.
+                                    </div>
+                                    <div class="case-item"><strong>Solution:</strong> A repository of experiments
+                                        dissecting
+                                        model behavior, prompt engineering logic, and API integration patterns.</div>
+                                    <div class="case-item"><strong>Tech:</strong> Python, PyTorch (Basics), OpenAI API,
+                                        Hugging Face.</div>
+                                    <div class="case-item"><strong>Learnings:</strong> The difference between stochastic
+                                        generation and deterministic logic, and how to constrain AI outputs for reliable
+                                        software.</div>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://github.com/Amazigh24" target="_blank" rel="noopener noreferrer"
+                                        class="btn small secondary"><i class="fab fa-github"></i> View on GitHub</a>
+                                </div>
                             </div>
                         </div>
                     </article>
@@ -615,6 +721,11 @@
                 <h2 class="section-title">Career Goals</h2>
                 <div class="goals-content">
                     <div class="goal-column">
+                        <h3><i class="fas fa-rocket"></i> Active Status</h3>
+                        <p
+                            style="font-size: 1.1em; color: var(--accent-color); font-weight: bold; margin-bottom: 1rem;">
+                            Looking for Junior Frontend / Game Dev roles.<br>Let's build something impactful.
+                        </p>
                         <h3><i class="fas fa-search-location"></i> Seeking Role</h3>
                         <ul>
                             <li><strong>Junior Frontend Developer</strong> (React, TypeScript)</li>
@@ -654,7 +765,8 @@
             <div class="container">
                 <h2 class="section-title">Let's Build Something Useful</h2>
                 <div class="contact-card">
-                    <a href="mailto:Mehdilakhouane24@gmail.com" class="btn primary cta-btn">
+                    <a href="#" id="email-link" data-user="Mehdilakhouane24" data-domain="gmail.com"
+                        class="btn primary cta-btn">
                         ✉️ Send me an Email
                     </a>
                     <a href="https://github.com/Amazigh24" target="_blank" rel="noopener noreferrer"

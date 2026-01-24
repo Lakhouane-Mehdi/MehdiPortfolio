@@ -22,7 +22,7 @@ window.addEventListener('scroll', () => {
     const scrollCurrent = document.documentElement.scrollTop;
 
     const scrollPercentage = (scrollCurrent / scrollTotal) * 100;
-    document.querySelector('.scroll-progres-bar').style.width = scrollPercentage + '%';
+    document.querySelector('.scroll-progress-bar').style.width = scrollPercentage + '%';
 });
 
 // Active Link Highlight on Scroll
@@ -61,6 +61,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
 // Email Obfuscation Logic
 const emailLink = document.getElementById('email-link');
 if (emailLink) {
@@ -77,3 +78,14 @@ if (emailLink) {
         emailLink.querySelector('span').textContent = email;
     });
 }
+
+// 3D Flip Card Interaction (Mobile/Click Support)
+document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('click', (e) => {
+        // Prevent flip if clicking a link or button
+        if (e.target.closest('a') || e.target.closest('button')) {
+            return;
+        }
+        card.classList.toggle('flipped');
+    });
+});
