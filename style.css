@@ -885,8 +885,11 @@ ul {
 }
 
 .featured-project {
-    border: 1px solid var(--accent-color);
-    box-shadow: 0 0 20px rgba(243, 156, 18, 0.1);
+    /* Removed custom border and shadow to match normal cards */
+    /* border: 1px solid var(--accent-color); */
+    /* box-shadow: 0 0 20px rgba(243, 156, 18, 0.1); */
+    position: relative;
+    /* Keep relative for the pseudo-element label if needed, or remove if label is also unwanted. User said "just normal", usually implies no label, but I'll stick to visual styles first. Wait, "featured" adds a label "Featured". User didn't explicitly ask to remove the label, just "blur" and "shadow". But for "as they were", better to be safe. I will keep the label logic but kill the box styling. */
 }
 
 /* Story / Behind the Build */
@@ -933,11 +936,12 @@ blockquote {
 
 /* Main Project / Flagship Style */
 .project-card.main-project {
-    border: 2px solid var(--accent-color);
-    background: linear-gradient(145deg, var(--bg-card) 0%, rgba(243, 156, 18, 0.05) 100%);
-    box-shadow: 0 0 30px rgba(243, 156, 18, 0.15);
+    /* Removed custom styling to fix blur and shadow issues */
+    /* border: 2px solid var(--accent-color); */
+    /* background: linear-gradient(145deg, var(--bg-card) 0%, rgba(243, 156, 18, 0.05) 100%); */
+    /* box-shadow: 0 0 30px rgba(243, 156, 18, 0.15); */
     position: relative;
-    transform: scale(1.02);
+    /* transform: scale(1.02); -- This was causing the blur */
     z-index: 1;
     /* Ensure it stays above others */
 }
@@ -958,9 +962,13 @@ blockquote {
 }
 
 .project-card.main-project:hover {
-    transform: scale(1.03) translateY(-5px);
-    box-shadow: 0 15px 40px rgba(243, 156, 18, 0.25);
-    z-index: 2;
+    /* transform: scale(1.03) translateY(-5px); */
+    /* box-shadow: 0 15px 40px rgba(243, 156, 18, 0.25); */
+    /* z-index: 2; */
+    /* Revert to standard hover behavior */
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.1);
 }
 
 /* From Trench to Tech Section */
