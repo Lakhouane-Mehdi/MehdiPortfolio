@@ -29,12 +29,9 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@300;500;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style_additions.css">
 
@@ -75,11 +72,11 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="hamburger">
+            <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
-            </div>
+            </button>
         </nav>
     </header>
 
@@ -104,7 +101,7 @@
             </div>
             <div class="hero-visual">
                 <div class="profile-img-container">
-                    <img src="images/Mehdi.jpg" alt="Mehdi Lakhouane" class="profile-img">
+                    <img src="images/Mehdi.jpg" alt="Mehdi Lakhouane" class="profile-img" width="320" height="320">
                     <div class="circle-spin"></div>
                 </div>
             </div>
@@ -233,6 +230,8 @@
                     <div class="skill-category">
                         <h3><i class="fas fa-layer-group"></i> Modern Web Engineering</h3>
                         <div class="skill-list">
+                            <span class="skill-tag">Node.js Runtime</span>
+                            <span class="skill-tag">TypeScript / Vanilla JS</span>
                             <span class="skill-tag">React.js / Next.js</span>
                             <span class="skill-tag">Tailwind CSS / Vite</span>
                             <span class="skill-tag">Firebase / PWA</span>
@@ -244,6 +243,7 @@
                         <h3><i class="fas fa-gamepad"></i> Game Dev</h3>
                         <div class="skill-list">
                             <span class="skill-tag">Godot Engine / GDScript</span>
+                            <span class="skill-tag">C++ Programming</span>
                             <span class="skill-tag">Unity / C#</span>
                             <span class="skill-tag">Game Physics</span>
                             <span class="skill-tag">State Machines</span>
@@ -256,6 +256,15 @@
                             <span class="skill-tag">Android Native (Kotlin)</span>
                             <span class="skill-tag">Cross-Platform</span>
                             <span class="skill-tag">iOS Support</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-desktop"></i> Desktop & Systems</h3>
+                        <div class="skill-list">
+                            <span class="skill-tag">C# / .NET / WPF</span>
+                            <span class="skill-tag">Python (Tkinter)</span>
+                            <span class="skill-tag">Electron</span>
+                            <span class="skill-tag">System APIs</span>
                         </div>
                     </div>
                     <div class="skill-category">
@@ -278,14 +287,16 @@
                 <h2 class="section-title">From Trench to Tech</h2>
                 <div class="trench-tech-grid">
                     <div class="tt-visual">
-                        <img src="images/trench-gear.png" alt="Construction Work Gear on Site" class="tt-img">
+                        <img src="images/trench-gear.png" alt="Construction Work Gear on Site" class="tt-img"
+                            width="500" height="400" loading="lazy">
                         <div class="tt-label">
                             <h3>The Trench</h3>
                             <p>Real-world chaos, mud, and deadlines.</p>
                         </div>
                     </div>
                     <div class="tt-visual">
-                        <img src="images/tech-alert.png" alt="GrabenGeist Critical Alert Interface" class="tt-img">
+                        <img src="images/tech-alert.png" alt="GrabenGeist Critical Alert Interface" class="tt-img"
+                            width="500" height="400" loading="lazy">
                         <div class="tt-label">
                             <h3>The Tech</h3>
                             <p>Digital precision, safety, and control.</p>
@@ -314,7 +325,7 @@
                             small, manageable logic blocks.</p>
                     </div>
                     <div class="process-item">
-                        <h3>�️ The Building</h3>
+                        <h3>🛠️ The Building</h3>
                         <p>I focus on "MVP first" — getting the core logic working before polishing. I use comments to
                             structure my thought process and treat documentation as part of the code, not an
                             afterthought.</p>
@@ -388,7 +399,7 @@
                                 <h3>Case Study</h3>
                                 <ul class="project-features">
                                     <li><strong>Zero-Latency</strong> Local Processing</li>
-                                    <li><strong>Asset Valuation:</strong> $45,000 (Commercial IP)</li>
+                                    <li><strong>Proactive</strong> System Tray Agent</li>
                                 </ul>
                                 <div class="project-case-study">
                                     <div class="case-item"><strong>Problem:</strong> Cloud AI assistants compromise
@@ -746,7 +757,8 @@
                         <a href="https://asphalt-calculator-eight.vercel.app/" target="_blank"
                             rel="noopener noreferrer">
                             <div class="gallery-img-wrapper">
-                                <img src="images/Asphalt_calculator.png" alt="Asphalt Calculator Interface">
+                                <img src="images/Asphalt_calculator.png" alt="Asphalt Calculator Interface" width="600"
+                                    height="337" loading="lazy">
                                 <div class="gallery-overlay">
                                     <i class="fas fa-external-link-alt"></i>
                                 </div>
@@ -757,7 +769,8 @@
                     <div class="gallery-item">
                         <a href="https://awal-dictionary-app.web.app/" target="_blank" rel="noopener noreferrer">
                             <div class="gallery-img-wrapper">
-                                <img src="images/Awal_Dictionary.png" alt="Awal Dictionary App Interface">
+                                <img src="images/Awal_Dictionary.png" alt="Awal Dictionary App Interface" width="600"
+                                    height="337" loading="lazy">
                                 <div class="gallery-overlay">
                                     <i class="fas fa-external-link-alt"></i>
                                 </div>
@@ -768,7 +781,8 @@
                     <div class="gallery-item">
                         <a href="https://sovereign-os-web.pages.dev/" target="_blank" rel="noopener noreferrer">
                             <div class="gallery-img-wrapper">
-                                <img src="images/sovereign_agent_home.png" alt="Sovereign Mastermind Interface">
+                                <img src="images/sovereign_agent_home.png" alt="Sovereign Mastermind Interface"
+                                    width="600" height="337" loading="lazy">
                                 <div class="gallery-overlay">
                                     <i class="fas fa-external-link-alt"></i>
                                 </div>
@@ -816,8 +830,7 @@
                 <div class="goals-content">
                     <div class="goal-column">
                         <h3><i class="fas fa-rocket"></i> Active Status</h3>
-                        <p
-                            style="font-size: 1.1em; color: var(--accent-color); font-weight: bold; margin-bottom: 1rem;">
+                        <p class="goal-status-text">
                             Looking for Junior Frontend / Game Dev roles.<br>Let's build something impactful.
                         </p>
                         <h3><i class="fas fa-search-location"></i> Seeking Role</h3>
@@ -874,7 +887,7 @@
                     </div>
                 </div>
                 <footer class="footer">
-                    <p>&copy; 2024 Mehdi Lakhouane. Built with precision.</p>
+                    <p>&copy; 2026 Mehdi Lakhouane. Built with precision.</p>
                 </footer>
             </div>
         </section>
