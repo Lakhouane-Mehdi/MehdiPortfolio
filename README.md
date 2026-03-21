@@ -33,7 +33,7 @@ A professional, responsive portfolio website designed to showcase my journey fro
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/Amazigh24/portfolio.git
+   git clone https://github.com/Lakhouane-Mehdi/portfolio.git
    ```
 2. **Open the project:**
    Simply open `index.html` in your preferred web browser.
@@ -53,7 +53,7 @@ This website is ready to be deployed on platforms like **Vercel**, **Netlify**, 
 ## 📬 Contact
 
 - **Email**: [Mehdilakhouane24@gmail.com](mailto:Mehdilakhouane24@gmail.com)
-- **GitHub**: [Amazigh24](https://github.com/Amazigh24)
+- **GitHub**: [Lakhouane-Mehdi](https://github.com/Lakhouane-Mehdi)
 - **Location**: Frankfurt am Main, Germany
 
 ---

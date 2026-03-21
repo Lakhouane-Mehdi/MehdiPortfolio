@@ -1,3 +1,11 @@
+@import '@fontsource/outfit/300.css';
+@import '@fontsource/outfit/500.css';
+@import '@fontsource/outfit/700.css';
+@import '@fontsource/inter/300.css';
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+
 /* CSS Reset & Variables */
 :root {
     --bg-primary: #0a0a0a;
@@ -48,6 +56,13 @@ a {
     transition: var(--transition-speed);
 }
 
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
 ul {
     list-style: none;
 }
@@ -90,6 +105,7 @@ ul {
     top: 0;
     width: 100%;
     background: rgba(10, 10, 10, 0.95);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     z-index: 1000;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
@@ -131,6 +147,9 @@ ul {
 .hamburger {
     display: none;
     cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 0;
 }
 
 .bar {
@@ -682,6 +701,13 @@ ul {
     align-items: center;
     gap: 0.8rem;
     color: var(--accent-color);
+}
+
+.goal-status-text {
+    font-size: 1.1em;
+    color: var(--accent-color);
+    font-weight: bold;
+    margin-bottom: 1rem;
 }
 
 .goal-column li {
