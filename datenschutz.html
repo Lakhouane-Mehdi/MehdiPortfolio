@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datenschutzerklärung · Mehdi Lakhouane</title>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; background: #0f0f10; color: #f5f5f5; }
+    main { max-width: 760px; margin: 3rem auto; padding: 0 1.5rem; line-height: 1.7; }
+    h1, h2 { color: #fff; }
+    a { color: #8ab4ff; }
+  </style>
+</head>
+<body>
+  <main>
+    <p><a href="/">← Zurück zur Startseite</a></p>
+    <h1>Datenschutzerklärung</h1>
+
+    <h2>1. Verantwortlicher</h2>
+    <p>
+      Verantwortlicher im Sinne der DSGVO ist:<br>
+      Mehdi Lakhouane, [Anschrift], Frankfurt am Main, Deutschland.<br>
+      Kontakt: <a href="mailto:Mehdilakhouane24@gmail.com">Mehdilakhouane24@gmail.com</a>
+    </p>
+
+    <h2>2. Hosting und Auftragsverarbeiter</h2>
+    <p>Wir nutzen zur Bereitstellung dieser Website folgende Dienstleister:</p>
+    <ul>
+      <li>
+        <strong>Vercel Inc.</strong>, 340 S Lemon Ave #4133, Walnut, CA 91789, USA —
+        Hosting und Auslieferung. Es besteht ein Auftragsverarbeitungsvertrag (AVV).
+        Datenübertragung in die USA erfolgt auf Grundlage der EU-Standardvertragsklauseln
+        und des EU-US Data Privacy Framework.
+      </li>
+      <li>
+        <strong>Supabase Inc.</strong> (EU-Region, Irland) — Datenbank, Authentifizierung
+        und Analyse. Datenverarbeitung erfolgt innerhalb der EU.
+      </li>
+    </ul>
+
+    <h2>3. Erhobene Daten beim Besuch der Website (Server-Logs)</h2>
+    <p>
+      Beim Aufruf dieser Website werden durch unseren Hoster technisch notwendige Daten
+      verarbeitet (IP-Adresse, Zeitstempel, aufgerufene URL, Referrer, User-Agent).
+      Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einem
+      sicheren Betrieb). Diese Logs werden kurzfristig zu Sicherheitszwecken gespeichert.
+    </p>
+
+    <h2>4. Technisch notwendige Speicherung (§ 25 Abs. 2 TTDSG / TDDDG)</h2>
+    <p>
+      Wir speichern im lokalen Speicher Ihres Browsers ausschließlich Ihre
+      Cookie-Einwilligungsentscheidung. Diese Speicherung ist unbedingt erforderlich,
+      damit wir Ihren Wunsch respektieren und das Banner nicht erneut anzeigen.
+      Eine Einwilligung ist hierfür nicht nötig.
+    </p>
+
+    <h2>5. Reichweitenmessung (mit Einwilligung)</h2>
+    <p>
+      Nur bei ausdrücklicher Einwilligung (Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1 TTDSG)
+      erfassen wir anonyme Statistiken über Seitenaufrufe. Wir verwenden
+      <strong>keine Tracking-Cookies</strong> und geben keine Daten an Dritte weiter.
+    </p>
+    <p>Erhoben werden:</p>
+    <ul>
+      <li>aufgerufener Pfad (z. B. /index.html)</li>
+      <li>Referrer (woher Sie kamen), sofern Ihr Browser ihn sendet</li>
+      <li>grobes Land (abgeleitet aus der IP durch Vercel, <em>ohne</em> Speicherung der IP)</li>
+      <li>Browser-Familie (z. B. „Chrome“, „Firefox“ — keine Version)</li>
+      <li>ein täglich rotierender, gesalzener Hash aus IP + User-Agent als Sitzungs-ID.
+        Dieser Hash kann <em>nicht</em> auf Ihre IP zurückgeführt werden und wird nach 24 h
+        ungültig.</li>
+    </ul>
+    <p>
+      Die IP-Adresse selbst wird <strong>nicht gespeichert</strong>. Die Daten liegen auf
+      Supabase-Servern in der EU (Irland).
+    </p>
+
+    <h2>6. Anmeldung (Admin-Bereich)</h2>
+    <p>
+      Der Bereich <code>/admin</code> ist ausschließlich für den Seitenbetreiber zugänglich.
+      Die Authentifizierung erfolgt per „Magic Link“ über Supabase Auth. Es werden nur die
+      E-Mail-Adresse und ein Sitzungs-Token verarbeitet. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO.
+    </p>
+
+    <h2>7. Speicherdauer</h2>
+    <ul>
+      <li>Reichweitenmessung: aggregiert bis zu 24 Monate, Rohdaten nach 90 Tagen gelöscht.</li>
+      <li>Einwilligungsprotokoll: 3 Jahre (Nachweispflicht nach Art. 7 Abs. 1 DSGVO).</li>
+      <li>Server-Logs: 14 Tage.</li>
+    </ul>
+
+    <h2>8. Ihre Rechte</h2>
+    <p>
+      Sie haben das Recht auf Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17),
+      Einschränkung (Art. 18), Datenübertragbarkeit (Art. 20), Widerspruch (Art. 21) sowie das
+      Recht, eine erteilte Einwilligung jederzeit zu widerrufen. Kontakt: siehe oben.
+    </p>
+    <p>
+      Sie können Ihre Einwilligung jederzeit widerrufen, indem Sie die Cookie-Einstellungen
+      zurücksetzen: <button type="button" id="revoke" style="padding:0.4rem 0.8rem; border-radius:6px; border:1px solid #444; background:#222; color:#fff; cursor:pointer;">Einwilligung widerrufen</button>
+    </p>
+    <p>
+      Beschwerderecht bei einer Aufsichtsbehörde (Art. 77 DSGVO): zuständig ist der
+      Hessische Beauftragte für Datenschutz und Informationsfreiheit.
+    </p>
+
+    <h2>9. Stand</h2>
+    <p>Diese Datenschutzerklärung hat den Stand 15.04.2026.</p>
+  </main>
+
+  <script type="module">
+    import { revokeConsent } from '/src/consent.js'
+    document.getElementById('revoke').addEventListener('click', revokeConsent)
+  </script>
+</body>
+</html>
