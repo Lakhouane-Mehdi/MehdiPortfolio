@@ -27,6 +27,11 @@
     .msg .actions { display: flex; gap: 0.5rem; margin-top: 0.5rem; }
     .msg .actions button { padding: 0.35rem 0.75rem; font-size: 0.85rem; cursor: pointer; }
     .msg a { color: #8ab4ff; }
+    .row.spread { justify-content: space-between; }
+    .row.spread h2 { margin: 0; }
+    .row.stats { margin-top: 1.5rem; gap: 2rem; }
+    .section-heading { margin-top: 2rem; }
+    .section-heading.messages { margin-top: 2.5rem; }
   </style>
 </head>
 <body>
@@ -44,28 +49,28 @@
     </section>
 
     <section id="dashboard" class="card hidden">
-      <div class="row" style="justify-content: space-between;">
+      <div class="row spread">
         <div>
-          <h2 style="margin:0">Analytics</h2>
+          <h2>Analytics</h2>
           <p id="who" class="muted"></p>
         </div>
         <button id="signout" type="button">Sign out</button>
       </div>
 
-      <div class="row" style="margin-top: 1.5rem; gap: 2rem;">
+      <div class="row stats">
         <div>
           <div class="muted">Total pageviews</div>
           <div id="total" class="stat">–</div>
         </div>
       </div>
 
-      <h3 style="margin-top:2rem">Daily breakdown</h3>
+      <h3 class="section-heading">Daily breakdown</h3>
       <table id="daily-table">
         <thead><tr><th>Day</th><th>Path</th><th>Views</th><th>Unique</th></tr></thead>
         <tbody></tbody>
       </table>
 
-      <h3 style="margin-top:2.5rem">Messages <span id="msg-count" class="muted"></span></h3>
+      <h3 class="section-heading messages">Messages <span id="msg-count" class="muted"></span></h3>
       <div id="messages-list"></div>
     </section>
   </main>
