@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="i18n-title" content="meta.title_datenschutz">
   <title>Datenschutzerklärung · Mehdi Lakhouane</title>
   <link rel="stylesheet" href="/style.css">
   <style>
@@ -10,108 +11,139 @@
     main { max-width: 760px; margin: 3rem auto; padding: 0 1.5rem; line-height: 1.7; }
     h1, h2 { color: #fff; }
     a { color: #8ab4ff; }
+    .lang-switch-legal { max-width: 760px; margin: 1.5rem auto 0; padding: 0 1.5rem; text-align: right; }
+    .lang-switch-legal button { background: transparent; border: 1px solid #444; color: #cbd5e1; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.8rem; cursor: pointer; margin-left: 0.25rem; }
+    .lang-switch-legal button[aria-pressed="true"] { background: #8ab4ff; color: #0f0f10; border-color: #8ab4ff; }
   </style>
 </head>
 <body>
+  <div class="lang-switch-legal">
+    <button type="button" class="lang-btn" data-lang-btn="en" aria-pressed="false" aria-label="English" data-i18n="nav.lang_en">EN</button>
+    <button type="button" class="lang-btn" data-lang-btn="de" aria-pressed="false" aria-label="Deutsch" data-i18n="nav.lang_de">DE</button>
+  </div>
   <main>
-    <p><a href="/">← Zurück zur Startseite</a></p>
-    <h1>Datenschutzerklärung</h1>
+    <p><a href="/" data-i18n="datenschutz.back">← Zurück zur Startseite</a></p>
+    <h1 data-i18n="datenschutz.title">Datenschutzerklärung</h1>
 
-    <h2>1. Verantwortlicher</h2>
-    <p>
+    <h2 data-i18n="datenschutz.h1">1. Verantwortlicher</h2>
+    <p data-i18n-html="datenschutz.p1_html">
       Verantwortlicher im Sinne der DSGVO ist:<br>
-      Mehdi Lakhouane, [Anschrift], Frankfurt am Main, Deutschland.<br>
-      Kontakt: <a href="mailto:Mehdilakhouane24@gmail.com">Mehdilakhouane24@gmail.com</a>
+      Mehdi Lakhouane, Hauptstraße 25, 63477 Maintal, Deutschland.<br>
+      Kontakt: <a href="mailto:leoamazigh@gmail.com">leoamazigh@gmail.com</a>,
+      <a href="mailto:Mehdilakhouane24@gmail.com">Mehdilakhouane24@gmail.com</a>
     </p>
 
-    <h2>2. Hosting und Auftragsverarbeiter</h2>
-    <p>Wir nutzen zur Bereitstellung dieser Website folgende Dienstleister:</p>
+    <h2 data-i18n="datenschutz.h2">2. Hosting und Auftragsverarbeiter</h2>
+    <p data-i18n="datenschutz.p2">Wir nutzen zur Bereitstellung dieser Website folgende Dienstleister:</p>
     <ul>
-      <li>
+      <li data-i18n-html="datenschutz.p2_li1_html">
         <strong>Vercel Inc.</strong>, 340 S Lemon Ave #4133, Walnut, CA 91789, USA —
         Hosting und Auslieferung. Es besteht ein Auftragsverarbeitungsvertrag (AVV).
         Datenübertragung in die USA erfolgt auf Grundlage der EU-Standardvertragsklauseln
         und des EU-US Data Privacy Framework.
       </li>
-      <li>
+      <li data-i18n-html="datenschutz.p2_li2_html">
         <strong>Supabase Inc.</strong> (EU-Region, Irland) — Datenbank, Authentifizierung
         und Analyse. Datenverarbeitung erfolgt innerhalb der EU.
       </li>
     </ul>
 
-    <h2>3. Erhobene Daten beim Besuch der Website (Server-Logs)</h2>
-    <p>
+    <h2 data-i18n="datenschutz.h3">3. Erhobene Daten beim Besuch der Website (Server-Logs)</h2>
+    <p data-i18n="datenschutz.p3">
       Beim Aufruf dieser Website werden durch unseren Hoster technisch notwendige Daten
       verarbeitet (IP-Adresse, Zeitstempel, aufgerufene URL, Referrer, User-Agent).
       Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einem
       sicheren Betrieb). Diese Logs werden kurzfristig zu Sicherheitszwecken gespeichert.
     </p>
 
-    <h2>4. Technisch notwendige Speicherung (§ 25 Abs. 2 TTDSG / TDDDG)</h2>
-    <p>
+    <h2 data-i18n="datenschutz.h4">4. Technisch notwendige Speicherung (§ 25 Abs. 2 TTDSG / TDDDG)</h2>
+    <p data-i18n="datenschutz.p4">
       Wir speichern im lokalen Speicher Ihres Browsers ausschließlich Ihre
       Cookie-Einwilligungsentscheidung. Diese Speicherung ist unbedingt erforderlich,
       damit wir Ihren Wunsch respektieren und das Banner nicht erneut anzeigen.
       Eine Einwilligung ist hierfür nicht nötig.
     </p>
 
-    <h2>5. Reichweitenmessung (mit Einwilligung)</h2>
-    <p>
+    <h2 data-i18n="datenschutz.h5">5. Reichweitenmessung (mit Einwilligung)</h2>
+    <p data-i18n-html="datenschutz.p5_html">
       Nur bei ausdrücklicher Einwilligung (Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1 TTDSG)
       erfassen wir anonyme Statistiken über Seitenaufrufe. Wir verwenden
       <strong>keine Tracking-Cookies</strong> und geben keine Daten an Dritte weiter.
     </p>
-    <p>Erhoben werden:</p>
+    <p data-i18n="datenschutz.p5_label">Erhoben werden:</p>
     <ul>
-      <li>aufgerufener Pfad (z. B. /index.html)</li>
-      <li>Referrer (woher Sie kamen), sofern Ihr Browser ihn sendet</li>
-      <li>grobes Land (abgeleitet aus der IP durch Vercel, <em>ohne</em> Speicherung der IP)</li>
-      <li>Browser-Familie (z. B. „Chrome“, „Firefox“ — keine Version)</li>
-      <li>ein täglich rotierender, gesalzener Hash aus IP + User-Agent als Sitzungs-ID.
+      <li data-i18n="datenschutz.p5_li1">aufgerufener Pfad (z. B. /index.html)</li>
+      <li data-i18n="datenschutz.p5_li2">Referrer (woher Sie kamen), sofern Ihr Browser ihn sendet</li>
+      <li data-i18n-html="datenschutz.p5_li3_html">grobes Land (abgeleitet aus der IP durch Vercel, <em>ohne</em> Speicherung der IP)</li>
+      <li data-i18n="datenschutz.p5_li4">Browser-Familie (z. B. „Chrome“, „Firefox“ — keine Version)</li>
+      <li data-i18n-html="datenschutz.p5_li5_html">ein täglich rotierender, gesalzener Hash aus IP + User-Agent als Sitzungs-ID.
         Dieser Hash kann <em>nicht</em> auf Ihre IP zurückgeführt werden und wird nach 24 h
         ungültig.</li>
     </ul>
-    <p>
+    <p data-i18n-html="datenschutz.p5_footer_html">
       Die IP-Adresse selbst wird <strong>nicht gespeichert</strong>. Die Daten liegen auf
       Supabase-Servern in der EU (Irland).
     </p>
 
-    <h2>6. Anmeldung (Admin-Bereich)</h2>
-    <p>
+    <h2 data-i18n="datenschutz.h6">6. Kontaktformular</h2>
+    <p data-i18n="datenschutz.p6">
+      Wenn Sie über das Kontaktformular eine Nachricht senden, verarbeiten wir die von Ihnen
+      angegebenen Daten (Name, E-Mail-Adresse, Nachrichtentext) zur Bearbeitung Ihrer Anfrage.
+      Rechtsgrundlage ist Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), die Sie durch
+      aktives Ankreuzen der Checkbox erteilen. Zusätzlich speichern wir einen täglich
+      rotierenden Hash Ihrer IP zur Spam-Abwehr (Ratenbegrenzung); dieser ist nach 24 Stunden
+      nicht mehr zuordenbar. Nachrichten werden nach spätestens 12 Monaten gelöscht, sofern
+      keine weitere Kommunikation erfolgt. Sie können Ihre Einwilligung jederzeit durch
+      eine E-Mail an uns widerrufen.
+    </p>
+
+    <h2 data-i18n="datenschutz.h7">7. Anmeldung (Admin-Bereich)</h2>
+    <p data-i18n-html="datenschutz.p7_html">
       Der Bereich <code>/admin</code> ist ausschließlich für den Seitenbetreiber zugänglich.
       Die Authentifizierung erfolgt per „Magic Link“ über Supabase Auth. Es werden nur die
       E-Mail-Adresse und ein Sitzungs-Token verarbeitet. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO.
     </p>
 
-    <h2>7. Speicherdauer</h2>
+    <h2 data-i18n="datenschutz.h8">8. Speicherdauer</h2>
     <ul>
-      <li>Reichweitenmessung: aggregiert bis zu 24 Monate, Rohdaten nach 90 Tagen gelöscht.</li>
-      <li>Einwilligungsprotokoll: 3 Jahre (Nachweispflicht nach Art. 7 Abs. 1 DSGVO).</li>
-      <li>Server-Logs: 14 Tage.</li>
+      <li data-i18n="datenschutz.p8_li1">Reichweitenmessung: aggregiert bis zu 24 Monate, Rohdaten nach 90 Tagen gelöscht.</li>
+      <li data-i18n="datenschutz.p8_li2">Einwilligungsprotokoll: 3 Jahre (Nachweispflicht nach Art. 7 Abs. 1 DSGVO).</li>
+      <li data-i18n="datenschutz.p8_li3">Server-Logs: 14 Tage.</li>
     </ul>
 
-    <h2>8. Ihre Rechte</h2>
-    <p>
+    <h2 data-i18n="datenschutz.h9">9. Ihre Rechte</h2>
+    <p data-i18n="datenschutz.p9a">
       Sie haben das Recht auf Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17),
       Einschränkung (Art. 18), Datenübertragbarkeit (Art. 20), Widerspruch (Art. 21) sowie das
       Recht, eine erteilte Einwilligung jederzeit zu widerrufen. Kontakt: siehe oben.
     </p>
     <p>
-      Sie können Ihre Einwilligung jederzeit widerrufen, indem Sie die Cookie-Einstellungen
-      zurücksetzen: <button type="button" id="revoke" style="padding:0.4rem 0.8rem; border-radius:6px; border:1px solid #444; background:#222; color:#fff; cursor:pointer;">Einwilligung widerrufen</button>
+      <span data-i18n="datenschutz.p9b_prefix">Sie können Ihre Einwilligung jederzeit widerrufen, indem Sie die Cookie-Einstellungen zurücksetzen: </span><button type="button" id="revoke" class="revoke-btn" data-i18n="datenschutz.p9b_btn">Einwilligung widerrufen</button>
     </p>
-    <p>
+    <p data-i18n="datenschutz.p9c">
       Beschwerderecht bei einer Aufsichtsbehörde (Art. 77 DSGVO): zuständig ist der
       Hessische Beauftragte für Datenschutz und Informationsfreiheit.
     </p>
 
-    <h2>9. Stand</h2>
-    <p>Diese Datenschutzerklärung hat den Stand 15.04.2026.</p>
+    <h2 data-i18n="datenschutz.h10">10. Stand</h2>
+    <p data-i18n="datenschutz.p10">Diese Datenschutzerklärung hat den Stand 15.04.2026.</p>
   </main>
 
+  <footer class="footer-legal">
+    <a href="/" data-i18n="footer.home">Startseite</a> ·
+    <a href="/impressum.html" data-i18n="footer.impressum">Impressum</a> ·
+    <a href="/datenschutz.html" data-i18n="footer.datenschutz">Datenschutz</a> ·
+    <button type="button" id="cookie-settings" data-i18n="footer.cookie_settings">Cookie-Einstellungen</button>
+  </footer>
+
+  <link rel="stylesheet" href="/src/consent.css">
   <script type="module">
-    import { revokeConsent } from '/src/consent.js'
+    import { initConsent, revokeConsent } from '/src/consent.js'
+    import { initI18n } from '/src/i18n.js'
+    initI18n().catch(err => console.warn('i18n init failed:', err))
+    initConsent()
     document.getElementById('revoke').addEventListener('click', revokeConsent)
+    document.getElementById('cookie-settings').addEventListener('click', revokeConsent)
   </script>
 </body>
 </html>

@@ -322,3 +322,35 @@
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, rgba(0, 0, 0, 0) 100%);
 }
+
+/* Language switcher (navbar) */
+.lang-switch {
+    display: inline-flex;
+    gap: 0.25rem;
+    margin-left: 0.75rem;
+    align-items: center;
+}
+
+.lang-switch .lang-btn {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: var(--text-secondary, #cbd5e1);
+    padding: 0.3rem 0.65rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+    line-height: 1;
+}
+
+.lang-switch .lang-btn:hover {
+    border-color: var(--accent-color, #a78bfa);
+    color: var(--accent-color, #a78bfa);
+}
+
+.lang-switch .lang-btn[aria-pressed="true"] {
+    background: var(--accent-color, #a78bfa);
+    color: #0f0f18;
+    border-color: var(--accent-color, #a78bfa);
+}

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="i18n-title" content="meta.title_screenshots">
+    <title>Sovereign Mastermind — App Screenshots | Mehdi Lakhouane</title>
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background: #0a0a0f;
+            color: #e2e8f0;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            min-height: 100vh;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.25rem 2rem;
+            background: rgba(255,255,255,0.04);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        header a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: color 0.2s;
+        }
+
+        header a:hover { color: #e2e8f0; }
+
+        header h1 {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #cbd5e1;
+        }
+
+        header .sep { color: #475569; }
+
+        .lang-switch-ss { margin-left: auto; display: flex; gap: 0.25rem; }
+        .lang-switch-ss button { background: transparent; border: 1px solid #334155; color: #cbd5e1; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.8rem; cursor: pointer; }
+        .lang-switch-ss button[aria-pressed="true"] { background: #a78bfa; color: #0f0f18; border-color: #a78bfa; }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem 5rem;
+        }
+
+        .page-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #a78bfa, #38bdf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .page-subtitle {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-bottom: 3rem;
+        }
+
+        .screenshot-block {
+            margin-bottom: 4rem;
+        }
+
+        .screenshot-label {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #a78bfa;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .screenshot-label span {
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: #475569;
+        }
+
+        .screenshot-frame {
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.08);
+            background: #0f0f18;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+            cursor: zoom-in;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .screenshot-frame:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 60px rgba(0,0,0,0.8);
+        }
+
+        .screenshot-frame img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        /* Lightbox */
+        .lb-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: rgba(0,0,0,0.95);
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .lb-overlay.active { display: flex; }
+
+        .lb-overlay img {
+            max-width: 98vw;
+            max-height: 96vh;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 0 80px rgba(167,139,250,0.15);
+        }
+
+        .lb-close {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 2.5rem;
+            cursor: pointer;
+            line-height: 1;
+            opacity: 0.6;
+            transition: opacity 0.2s;
+        }
+
+        .lb-close:hover { opacity: 1; }
+
+        .lb-hint {
+            position: absolute;
+            bottom: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #475569;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html"><i class="fas fa-arrow-left"></i> <span data-i18n="screenshots.back">Back to Portfolio</span></a>
+        <span class="sep">/</span>
+        <h1 data-i18n="screenshots.header">Sovereign Mastermind — App Screenshots</h1>
+        <div class="lang-switch-ss">
+            <button type="button" class="lang-btn" data-lang-btn="en" aria-pressed="false" aria-label="English" data-i18n="nav.lang_en">EN</button>
+            <button type="button" class="lang-btn" data-lang-btn="de" aria-pressed="false" aria-label="Deutsch" data-i18n="nav.lang_de">DE</button>
+        </div>
+    </header>
+
+    <main>
+        <p class="page-title" data-i18n="screenshots.title">Sovereign Mastermind</p>
+        <p class="page-subtitle" data-i18n="screenshots.subtitle">Desktop AI Agent App &mdash; click any screenshot to view full size</p>
+
+        <div class="screenshot-block" id="app">
+            <div class="screenshot-label">
+                <i class="fas fa-desktop"></i> <span data-i18n="screenshots.home_label">Home Screen</span>
+                <span>sovereign_mastermind_app.png</span>
+            </div>
+            <div class="screenshot-frame" data-img="/images/sovereign_mastermind_app.png">
+                <img src="/images/sovereign_mastermind_app.png"
+                     alt="Sovereign Mastermind Desktop App — Home Screen"
+                     loading="eager">
+            </div>
+        </div>
+
+        <div class="screenshot-block" id="chat">
+            <div class="screenshot-label">
+                <i class="fas fa-comments"></i> <span data-i18n="screenshots.chat_label">Chat Interface</span>
+                <span>sovereign_mastermind_chat.png</span>
+            </div>
+            <div class="screenshot-frame" data-img="/images/sovereign_mastermind_chat.png">
+                <img src="/images/sovereign_mastermind_chat.png"
+                     alt="Sovereign Mastermind Desktop App — Chat Interface"
+                     loading="eager">
+            </div>
+        </div>
+    </main>
+
+    <!-- Lightbox -->
+    <div class="lb-overlay" id="lb">
+        <button type="button" class="lb-close" aria-label="Close">&times;</button>
+        <img src="" alt="">
+        <p class="lb-hint" data-i18n="screenshots.close_hint">Press Esc or click outside to close</p>
+    </div>
+
+    <script type="module">
+        import { initI18n } from '/src/i18n.js'
+        initI18n().catch(err => console.warn('i18n init failed:', err))
+
+        const lb = document.getElementById('lb');
+        const lbImg = lb.querySelector('img');
+
+        document.querySelectorAll('.screenshot-frame').forEach(frame => {
+            frame.addEventListener('click', () => {
+                lbImg.src = frame.dataset.img;
+                lbImg.alt = frame.querySelector('img').alt;
+                lb.classList.add('active');
+            });
+        });
+
+        lb.querySelector('.lb-close').addEventListener('click', () => lb.classList.remove('active'));
+        lb.addEventListener('click', e => { if (e.target === lb) lb.classList.remove('active'); });
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') lb.classList.remove('active'); });
+    </script>
+
+</body>
+</html>

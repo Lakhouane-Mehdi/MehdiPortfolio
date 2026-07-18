@@ -15,6 +15,6 @@ It's not just another dashboard. It's a digital guardian for trench work. I buil
 
 This journey from manual labor to **Software Product Owner** taught me one thing: The best tools aren't built in a bubble. They are built by someone who knows what it feels like to wear the gloves.
 
-Check out the project and my portfolio here: [https://mehdi-portfolio-kappa.vercel.app/](https://mehdi-portfolio-kappa.vercel.app/)
+Check out the project and my portfolio here: [https://mehdilakhouane.com/](https://mehdilakhouane.com/)
 
 #ConstructionTech #SoftwareDevelopment #GrabenGeist #CareerChange #Python #WebDev #Frankfurt

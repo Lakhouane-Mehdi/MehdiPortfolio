@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="i18n-title" content="meta.title_impressum">
   <title>Impressum · Mehdi Lakhouane</title>
   <link rel="stylesheet" href="/style.css">
   <style>
@@ -10,35 +11,43 @@
     main { max-width: 760px; margin: 3rem auto; padding: 0 1.5rem; line-height: 1.7; }
     h1, h2 { color: #fff; }
     a { color: #8ab4ff; }
+    .lang-switch-legal { max-width: 760px; margin: 1.5rem auto 0; padding: 0 1.5rem; text-align: right; }
+    .lang-switch-legal button { background: transparent; border: 1px solid #444; color: #cbd5e1; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.8rem; cursor: pointer; margin-left: 0.25rem; }
+    .lang-switch-legal button[aria-pressed="true"] { background: #8ab4ff; color: #0f0f10; border-color: #8ab4ff; }
   </style>
 </head>
 <body>
+  <div class="lang-switch-legal">
+    <button type="button" class="lang-btn" data-lang-btn="en" aria-pressed="false" aria-label="English" data-i18n="nav.lang_en">EN</button>
+    <button type="button" class="lang-btn" data-lang-btn="de" aria-pressed="false" aria-label="Deutsch" data-i18n="nav.lang_de">DE</button>
+  </div>
   <main>
-    <p><a href="/">← Zurück zur Startseite</a></p>
-    <h1>Impressum</h1>
-    <p>Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz)</p>
+    <p><a href="/" data-i18n="impressum.back">← Zurück zur Startseite</a></p>
+    <h1 data-i18n="impressum.title">Impressum</h1>
+    <p data-i18n="impressum.note">Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz)</p>
 
-    <h2>Diensteanbieter</h2>
+    <h2 data-i18n="impressum.h_provider">Diensteanbieter</h2>
     <p>
       Mehdi Lakhouane<br>
-      [Straße und Hausnummer]<br>
-      [PLZ] Frankfurt am Main<br>
+      Hauptstraße 25<br>
+      63477 Maintal<br>
       Deutschland
     </p>
 
-    <h2>Kontakt</h2>
+    <h2 data-i18n="impressum.h_contact">Kontakt</h2>
     <p>
+      E-Mail: <a href="mailto:leoamazigh@gmail.com">leoamazigh@gmail.com</a><br>
       E-Mail: <a href="mailto:Mehdilakhouane24@gmail.com">Mehdilakhouane24@gmail.com</a>
     </p>
 
-    <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
+    <h2 data-i18n="impressum.h_responsible">Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
     <p>
       Mehdi Lakhouane<br>
-      [Anschrift wie oben]
+      Hauptstraße 25, 63477 Maintal
     </p>
 
-    <h2>Haftung für Inhalte</h2>
-    <p>
+    <h2 data-i18n="impressum.h_liability_content">Haftung für Inhalte</h2>
+    <p data-i18n="impressum.liability_content">
       Als Diensteanbieter sind wir gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten
       nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG sind wir als
       Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde
@@ -46,27 +55,38 @@
       Tätigkeit hinweisen.
     </p>
 
-    <h2>Haftung für Links</h2>
-    <p>
+    <h2 data-i18n="impressum.h_liability_links">Haftung für Links</h2>
+    <p data-i18n="impressum.liability_links">
       Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen
       Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen.
       Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber
       der Seiten verantwortlich.
     </p>
 
-    <h2>Urheberrecht</h2>
-    <p>
+    <h2 data-i18n="impressum.h_copyright">Urheberrecht</h2>
+    <p data-i18n="impressum.copyright">
       Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen
       dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art
       der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen
       Zustimmung des jeweiligen Autors bzw. Erstellers.
     </p>
 
-    <p style="margin-top: 3rem; color: #888; font-size: 0.85rem;">
-      <strong>Hinweis:</strong> Die Platzhalter in eckigen Klammern bitte vor dem Veröffentlichen
-      durch die tatsächliche Anschrift ersetzen. Nach § 5 DDG ist eine ladungsfähige Anschrift
-      verpflichtend.
-    </p>
   </main>
+
+  <footer class="footer-legal">
+    <a href="/" data-i18n="footer.home">Startseite</a> ·
+    <a href="/impressum.html" data-i18n="footer.impressum">Impressum</a> ·
+    <a href="/datenschutz.html" data-i18n="footer.datenschutz">Datenschutz</a> ·
+    <button type="button" id="cookie-settings" data-i18n="footer.cookie_settings">Cookie-Einstellungen</button>
+  </footer>
+
+  <link rel="stylesheet" href="/src/consent.css">
+  <script type="module">
+    import { initConsent, revokeConsent } from '/src/consent.js'
+    import { initI18n } from '/src/i18n.js'
+    initI18n().catch(err => console.warn('i18n init failed:', err))
+    initConsent()
+    document.getElementById('cookie-settings').addEventListener('click', revokeConsent)
+  </script>
 </body>
 </html>

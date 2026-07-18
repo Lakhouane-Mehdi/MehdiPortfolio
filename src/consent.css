@@ -43,3 +43,44 @@
 }
 
 #consent-banner button:hover { filter: brightness(1.15); }
+
+.revoke-btn {
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background: #222;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+}
+.revoke-btn:hover { filter: brightness(1.2); }
+
+.footer-legal {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  color: #888;
+  font-size: 0.85rem;
+  border-top: 1px solid #2a2a2a;
+  margin-top: 2rem;
+}
+.footer-legal a, .footer-legal button {
+  color: #8ab4ff;
+  background: none;
+  border: none;
+  padding: 0 0.3rem;
+  cursor: pointer;
+  font: inherit;
+  text-decoration: underline;
+}
+.footer-legal a:hover, .footer-legal button:hover { color: #b8d1ff; }
+
+button.link-like {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  color: inherit;
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}

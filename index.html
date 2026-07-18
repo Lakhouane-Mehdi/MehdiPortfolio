@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="i18n-title" content="meta.title_home">
     <title>Mehdi Lakhouane | Portfolio</title>
-    <meta name="description"
+    <meta name="description" data-i18n-attr="content:meta.desc_home"
         content="Portfolio of Mehdi Lakhouane - Independent Software Developer based in Frankfurt. Building AI agents, web apps, mobile apps, games, and construction tech.">
     <meta name="keywords"
         content="Mehdi Lakhouane, Road Construction Specialist, Strassenbauer, Software Developer, Web Developer, Frankfurt, Portfolio, Python, Godot, Asphalt Calculator">
@@ -28,7 +29,7 @@
     <meta property="twitter:image" content="https://mehdilakhouane.com/images/Mehdi.jpg">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="icon" type="image/png" href="/images/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -65,14 +66,18 @@
         <nav class="navbar">
             <div class="logo">Mehdi Lakhouane</div>
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#experience">Built</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about" data-i18n="nav.about">About</a></li>
+                <li><a href="#education" data-i18n="nav.education">Education</a></li>
+                <li><a href="#experience" data-i18n="nav.experience">Built</a></li>
+                <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+                <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+                <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+                <li class="lang-switch">
+                    <button type="button" class="lang-btn" data-lang-btn="en" aria-pressed="false" aria-label="English" data-i18n="nav.lang_en">EN</button>
+                    <button type="button" class="lang-btn" data-lang-btn="de" aria-pressed="false" aria-label="Deutsch" data-i18n="nav.lang_de">DE</button>
+                </li>
             </ul>
-            <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+            <button type="button" class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -84,23 +89,23 @@
         <!-- Hero Section -->
         <section class="hero" id="home">
             <div class="hero-content">
-                <span class="badge">Based in Frankfurt am Main, Germany 🇩🇪</span>
-                <h1>Mehdi Lakhouane<br> <span class="highlight">I build software that solves real problems.</span></h1>
-                <p class="subtitle">From local AI agents to mobile apps and games — I ship tools that work where they're needed.</p>
+                <span class="badge" data-i18n="hero.badge">Based in Frankfurt am Main, Germany 🇩🇪</span>
+                <h1><span data-i18n="hero.name">Mehdi Lakhouane</span><br> <span class="highlight" data-i18n="hero.tagline">I build software that solves real problems.</span></h1>
+                <p class="subtitle" data-i18n="hero.subtitle">From local AI agents to mobile apps and games — I ship tools that work where they're needed.</p>
                 <div class="hero-tags">
-                    <span><i class="fas fa-brain"></i> AI & Local LLMs</span>
-                    <span><i class="fas fa-code"></i> Web & Mobile</span>
-                    <span><i class="fas fa-gamepad"></i> Game Dev</span>
-                    <span><i class="fas fa-shield-alt"></i> Sovereign Tech</span>
+                    <span><i class="fas fa-brain"></i> <span data-i18n="hero.tag_ai">AI & Local LLMs</span></span>
+                    <span><i class="fas fa-code"></i> <span data-i18n="hero.tag_web">Web & Mobile</span></span>
+                    <span><i class="fas fa-gamepad"></i> <span data-i18n="hero.tag_game">Game Dev</span></span>
+                    <span><i class="fas fa-shield-alt"></i> <span data-i18n="hero.tag_sovereign">Sovereign Tech</span></span>
                 </div>
                 <div class="cta-buttons">
-                    <a href="#projects" class="btn primary">View Projects</a>
-                    <a href="#contact" class="btn secondary">Contact Me</a>
+                    <a href="#projects" class="btn primary" data-i18n="hero.cta_projects">View Projects</a>
+                    <a href="#contact" class="btn secondary" data-i18n="hero.cta_contact">Contact Me</a>
                 </div>
             </div>
             <div class="hero-visual">
                 <div class="profile-img-container">
-                    <img src="images/Mehdi.jpg" alt="Mehdi Lakhouane" class="profile-img" width="320" height="320">
+                    <img src="/images/Mehdi.jpg" alt="Mehdi Lakhouane" class="profile-img" width="320" height="320">
                     <div class="circle-spin"></div>
                 </div>
             </div>
@@ -109,34 +114,34 @@
         <!-- About Section -->
         <section id="about" class="section">
             <div class="container">
-                <h2 class="section-title">About Me</h2>
+                <h2 class="section-title" data-i18n="about.title">About Me</h2>
                 <div class="about-grid">
                     <div class="about-text">
-                        <p>I'm <strong>Mehdi Lakhouane</strong>, an independent developer based in Frankfurt. I build
+                        <p data-i18n-html="about.p1_html">I'm <strong>Mehdi Lakhouane</strong>, an independent developer based in Frankfurt. I build
                             AI agents, web apps, mobile apps, and games — all focused on solving problems I've
                             encountered firsthand.</p>
-                        <p>I've created a <strong>local AI coding agent</strong> that runs fully offline, a
+                        <p data-i18n-html="about.p2_html">I've created a <strong>local AI coding agent</strong> that runs fully offline, a
                             <strong>Tamazight dictionary PWA</strong> preserving my native language, a
                             <strong>computer vision tool</strong> for construction sites, and multiple
                             <strong>shipped games</strong> in Godot.</p>
-                        <p>I work across the full stack — Python, React, Flutter, Godot, Electron — and I
+                        <p data-i18n="about.p3">I work across the full stack — Python, React, Flutter, Godot, Electron — and I
                             ship what I build. Every project on this site is live or downloadable.</p>
                     </div>
                     <div class="about-stats">
                         <div class="stat-card">
                             <i class="fas fa-brain"></i>
-                            <h3>10+ Projects</h3>
-                            <p>Shipped & Live</p>
+                            <h3 data-i18n="about.stat1_title">10+ Projects</h3>
+                            <p data-i18n="about.stat1_sub">Shipped & Live</p>
                         </div>
                         <div class="stat-card">
                             <i class="fas fa-laptop-code"></i>
-                            <h3>Full Stack</h3>
-                            <p>Web, Mobile, Desktop, AI</p>
+                            <h3 data-i18n="about.stat2_title">Full Stack</h3>
+                            <p data-i18n="about.stat2_sub">Web, Mobile, Desktop, AI</p>
                         </div>
                         <div class="stat-card">
                             <i class="fas fa-language"></i>
-                            <h3>5 Languages</h3>
-                            <p>AR, TMA, EN, FR, DE</p>
+                            <h3 data-i18n="about.stat3_title">5 Languages</h3>
+                            <p data-i18n="about.stat3_sub">AR, TMA, EN, FR, DE</p>
                         </div>
                     </div>
                 </div>
@@ -146,56 +151,56 @@
         <!-- Education Section -->
         <section id="education" class="section alt-bg">
             <div class="container">
-                <h2 class="section-title">Education & Qualifications</h2>
+                <h2 class="section-title" data-i18n="education.title">Education & Qualifications</h2>
                 <div class="timeline">
                     <div class="timeline-item">
                         <div class="timeline-icon"><i class="fas fa-laptop-code"></i></div>
                         <div class="timeline-content">
-                            <h3>Self-Directed Software Engineering</h3>
-                            <span class="timeline-date">Ongoing</span>
-                            <p>Everything I know about software, I learned by building and shipping real projects.</p>
+                            <h3 data-i18n="education.self_title">Self-Directed Software Engineering</h3>
+                            <span class="timeline-date" data-i18n="education.self_date">Ongoing</span>
+                            <p data-i18n="education.self_desc">Everything I know about software, I learned by building and shipping real projects.</p>
                             <ul>
-                                <li><strong>AI & Systems:</strong> Python, local LLMs (Ollama), RAG pipelines, ChromaDB, agentic workflows</li>
-                                <li><strong>Web:</strong> React, TypeScript, Node.js, Vite, Firebase, PWAs, Service Workers</li>
-                                <li><strong>Mobile:</strong> Flutter/Dart, Android Native (Kotlin)</li>
-                                <li><strong>Game Dev:</strong> Godot Engine, GDScript, C#, finite state machines, particle systems</li>
-                                <li><strong>Desktop:</strong> Electron, C#/.NET, Python (Tkinter), OpenCV</li>
-                                <li>Every skill validated by a shipped project — not a certificate</li>
+                                <li data-i18n-html="education.self_li1_html"><strong>AI & Systems:</strong> Python, local LLMs (Ollama), RAG pipelines, ChromaDB, agentic workflows</li>
+                                <li data-i18n-html="education.self_li2_html"><strong>Web:</strong> React, TypeScript, Node.js, Vite, Firebase, PWAs, Service Workers</li>
+                                <li data-i18n-html="education.self_li3_html"><strong>Mobile:</strong> Flutter/Dart, Android Native (Kotlin)</li>
+                                <li data-i18n-html="education.self_li4_html"><strong>Game Dev:</strong> Godot Engine, GDScript, C#, finite state machines, particle systems</li>
+                                <li data-i18n-html="education.self_li5_html"><strong>Desktop:</strong> Electron, C#/.NET, Python (Tkinter), OpenCV</li>
+                                <li data-i18n="education.self_li6">Every skill validated by a shipped project — not a certificate</li>
                             </ul>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-icon"><i class="fas fa-hard-hat"></i></div>
                         <div class="timeline-content">
-                            <h3>Ausbildung – Strassenbauer</h3>
-                            <span class="timeline-date">Completed & Certified 🇩🇪</span>
-                            <p>3-year vocational program in road infrastructure and heavy construction.</p>
+                            <h3 data-i18n="education.ausb_title">Ausbildung – Strassenbauer</h3>
+                            <span class="timeline-date" data-i18n="education.ausb_date">Completed & Certified 🇩🇪</span>
+                            <p data-i18n="education.ausb_desc">3-year vocational program in road infrastructure and heavy construction.</p>
                             <ul>
-                                <li>Material calculations, logistics, and cost estimation</li>
-                                <li>Precision work under real deadlines and physical conditions</li>
-                                <li>Directly inspired RebarSight and Asphalt Calculator projects</li>
+                                <li data-i18n="education.ausb_li1">Material calculations, logistics, and cost estimation</li>
+                                <li data-i18n="education.ausb_li2">Precision work under real deadlines and physical conditions</li>
+                                <li data-i18n="education.ausb_li3">Directly inspired RebarSight and Asphalt Calculator projects</li>
                             </ul>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-icon"><i class="fas fa-university"></i></div>
                         <div class="timeline-content">
-                            <h3>English Literature</h3>
-                            <span class="timeline-date">University Level</span>
-                            <p>Trained how I think, write, and structure ideas — skills I use daily in documentation, game narratives, and working across five languages.</p>
+                            <h3 data-i18n="education.eng_title">English Literature</h3>
+                            <span class="timeline-date" data-i18n="education.eng_date">University Level</span>
+                            <p data-i18n="education.eng_desc">Trained how I think, write, and structure ideas — skills I use daily in documentation, game narratives, and working across five languages.</p>
                             <ul>
-                                <li>Clear technical writing and documentation</li>
-                                <li>Narrative design and world-building for games</li>
-                                <li>Thinking across languages and cultural contexts</li>
+                                <li data-i18n="education.eng_li1">Clear technical writing and documentation</li>
+                                <li data-i18n="education.eng_li2">Narrative design and world-building for games</li>
+                                <li data-i18n="education.eng_li3">Thinking across languages and cultural contexts</li>
                             </ul>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-icon"><i class="fas fa-graduation-cap"></i></div>
                         <div class="timeline-content">
-                            <h3>Moroccan Baccalaureate</h3>
-                            <span class="timeline-date">Completed</span>
-                            <p>Foundation in sciences and languages — the starting point before moving to Germany in 2018.</p>
+                            <h3 data-i18n="education.bac_title">Moroccan Baccalaureate</h3>
+                            <span class="timeline-date" data-i18n="education.bac_date">Completed</span>
+                            <p data-i18n="education.bac_desc">Foundation in sciences and languages — the starting point before moving to Germany in 2018.</p>
                         </div>
                     </div>
                 </div>
@@ -205,25 +210,25 @@
         <!-- Professional Experience -->
         <section id="experience" class="section">
             <div class="container">
-                <h2 class="section-title">What I've Built</h2>
+                <h2 class="section-title" data-i18n="experience.title">What I've Built</h2>
                 <div class="experience-card">
                     <div class="exp-header">
-                        <h3>🧠 Independent Software Developer</h3>
-                        <span class="location">Frankfurt, Germany</span>
+                        <h3 data-i18n="experience.role">🧠 Independent Software Developer</h3>
+                        <span class="location" data-i18n="experience.location">Frankfurt, Germany</span>
                     </div>
                     <div class="exp-body">
                         <ul>
-                            <li>Built <strong>Sovereign Mastermind</strong> — a fully local AI coding agent with RAG, vector memory, and autonomous plan-execute-verify loops</li>
-                            <li>Created <strong>Shadow Agent</strong> — a proactive system tray AI that acts before you ask, running 100% offline</li>
-                            <li>Shipped <strong>Awal Dictionary</strong> — a PWA preserving the Tamazight language with 2000+ roots, fully offline</li>
-                            <li>Developed <strong>RebarSight</strong> — computer vision tool that detects rebar spacing errors from site photos in under 60 seconds</li>
-                            <li>Built <strong>GrabenGeist</strong> — real-time construction safety monitoring with digital compliance logs</li>
-                            <li>Finished multiple games in Godot including <strong>Neon Quadrants</strong>, platformers, and a Moroccan-themed game</li>
-                            <li>Developing mobile apps with <strong>Flutter/Dart</strong> and <strong>Android Native (Kotlin)</strong></li>
+                            <li data-i18n-html="experience.li1_html">Built <strong>Sovereign Mastermind</strong> — a fully local AI coding agent with RAG, vector memory, and autonomous plan-execute-verify loops</li>
+                            <li data-i18n-html="experience.li2_html">Created <strong>Shadow Agent</strong> — a proactive system tray AI that acts before you ask, running 100% offline</li>
+                            <li data-i18n-html="experience.li3_html">Shipped <strong>Awal Dictionary</strong> — a PWA preserving the Tamazight language with 2000+ roots, fully offline</li>
+                            <li data-i18n-html="experience.li4_html">Developed <strong>RebarSight</strong> — computer vision tool that detects rebar spacing errors from site photos in under 60 seconds</li>
+                            <li data-i18n-html="experience.li5_html">Built <strong>GrabenGeist</strong> — real-time construction safety monitoring with digital compliance logs</li>
+                            <li data-i18n-html="experience.li6_html">Finished multiple games in Godot including <strong>Neon Quadrants</strong>, platformers, and a Moroccan-themed game</li>
+                            <li data-i18n-html="experience.li7_html">Developing mobile apps with <strong>Flutter/Dart</strong> and <strong>Android Native (Kotlin)</strong></li>
                         </ul>
                         <div class="exp-highlight">
                             <i class="fas fa-lightbulb"></i>
-                            <span>Every project started from a real problem I encountered — not a tutorial.</span>
+                            <span data-i18n="experience.highlight">Every project started from a real problem I encountered — not a tutorial.</span>
                         </div>
                     </div>
                 </div>
@@ -233,10 +238,10 @@
         <!-- Technical Skills -->
         <section id="skills" class="section alt-bg">
             <div class="container">
-                <h2 class="section-title">Tech Stack & Skills</h2>
+                <h2 class="section-title" data-i18n="skills.title">Tech Stack & Skills</h2>
                 <div class="skills-grid">
                     <div class="skill-category">
-                        <h3><i class="fas fa-brain"></i> AI & Sovereign Systems</h3>
+                        <h3><i class="fas fa-brain"></i> <span data-i18n="skills.cat_ai">AI & Sovereign Systems</span></h3>
                         <div class="skill-list">
                             <span class="skill-tag">Local LLMs (Ollama)</span>
                             <span class="skill-tag">RAG / Vector DBs (ChromaDB)</span>
@@ -246,7 +251,7 @@
                         </div>
                     </div>
                     <div class="skill-category">
-                        <h3><i class="fas fa-layer-group"></i> Modern Web Engineering</h3>
+                        <h3><i class="fas fa-layer-group"></i> <span data-i18n="skills.cat_web">Modern Web Engineering</span></h3>
                         <div class="skill-list">
                             <span class="skill-tag">Node.js Runtime</span>
                             <span class="skill-tag">TypeScript / Vanilla JS</span>
@@ -258,7 +263,7 @@
                         </div>
                     </div>
                     <div class="skill-category">
-                        <h3><i class="fas fa-gamepad"></i> Game Dev</h3>
+                        <h3><i class="fas fa-gamepad"></i> <span data-i18n="skills.cat_game">Game Dev</span></h3>
                         <div class="skill-list">
                             <span class="skill-tag">Godot Engine / GDScript</span>
                             <span class="skill-tag">C++ Programming</span>
@@ -268,7 +273,7 @@
                         </div>
                     </div>
                     <div class="skill-category">
-                        <h3><i class="fas fa-mobile-alt"></i> Mobile Development</h3>
+                        <h3><i class="fas fa-mobile-alt"></i> <span data-i18n="skills.cat_mobile">Mobile Development</span></h3>
                         <div class="skill-list">
                             <span class="skill-tag">Flutter / Dart</span>
                             <span class="skill-tag">Android Native (Kotlin)</span>
@@ -277,7 +282,7 @@
                         </div>
                     </div>
                     <div class="skill-category">
-                        <h3><i class="fas fa-desktop"></i> Desktop & Systems</h3>
+                        <h3><i class="fas fa-desktop"></i> <span data-i18n="skills.cat_desktop">Desktop & Systems</span></h3>
                         <div class="skill-list">
                             <span class="skill-tag">C# / .NET / WPF</span>
                             <span class="skill-tag">Python (Tkinter)</span>
@@ -286,7 +291,7 @@
                         </div>
                     </div>
                     <div class="skill-category">
-                        <h3><i class="fas fa-tools"></i> Tools & DevOps</h3>
+                        <h3><i class="fas fa-tools"></i> <span data-i18n="skills.cat_tools">Tools & DevOps</span></h3>
                         <div class="skill-list">
                             <span class="skill-tag">Git & GitHub</span>
                             <span class="skill-tag">VS Code</span>
@@ -302,26 +307,26 @@
         <!-- From Trench to Tech Section -->
         <section id="trench-to-tech" class="section">
             <div class="container">
-                <h2 class="section-title">From Trench to Tech</h2>
+                <h2 class="section-title" data-i18n="trench.title">From Trench to Tech</h2>
                 <div class="trench-tech-grid">
                     <div class="tt-visual">
-                        <img src="images/trench-gear.png" alt="Construction Work Gear on Site" class="tt-img"
+                        <img src="/images/trench-gear.png" alt="Construction Work Gear on Site" class="tt-img"
                             width="500" height="400" loading="lazy">
                         <div class="tt-label">
-                            <h3>The Trench</h3>
-                            <p>Real-world chaos, mud, and deadlines.</p>
+                            <h3 data-i18n="trench.label_trench">The Trench</h3>
+                            <p data-i18n="trench.label_trench_sub">Real-world chaos, mud, and deadlines.</p>
                         </div>
                     </div>
                     <div class="tt-visual">
-                        <img src="images/tech-alert.png" alt="GrabenGeist Critical Alert Interface" class="tt-img"
+                        <img src="/images/tech-alert.png" alt="GrabenGeist Critical Alert Interface" class="tt-img"
                             width="500" height="400" loading="lazy">
                         <div class="tt-label">
-                            <h3>The Tech</h3>
-                            <p>Digital precision, safety, and control.</p>
+                            <h3 data-i18n="trench.label_tech">The Tech</h3>
+                            <p data-i18n="trench.label_tech_sub">Digital precision, safety, and control.</p>
                         </div>
                     </div>
                     <div class="tt-connector">
-                        <p>
+                        <p data-i18n="trench.connector">
                             My hands-on experience allows me to build software that actually works for people wearing
                             gloves and standing in the mud. I bridge the gap between heavy machinery and high-level
                             code.
@@ -334,23 +339,23 @@
         <!-- Process & Methodology Section -->
         <section id="process" class="section alt-bg">
             <div class="container">
-                <h2 class="section-title">How I Build</h2>
+                <h2 class="section-title" data-i18n="process.title">How I Build</h2>
                 <div class="process-grid">
                     <div class="process-item">
-                        <h3>🧠 The Thinking</h3>
-                        <p>Every project starts with one question: what's broken and who's affected? Whether it's
+                        <h3 data-i18n="process.think_title">🧠 The Thinking</h3>
+                        <p data-i18n="process.think_desc">Every project starts with one question: what's broken and who's affected? Whether it's
                             preserving a language or automating safety logs, I map the real-world workflow before
                             writing a single line.</p>
                     </div>
                     <div class="process-item">
-                        <h3>🛠️ The Building</h3>
-                        <p>I focus on "MVP first" — getting the core logic working before polishing. I use comments to
+                        <h3 data-i18n="process.build_title">🛠️ The Building</h3>
+                        <p data-i18n="process.build_desc">I focus on "MVP first" — getting the core logic working before polishing. I use comments to
                             structure my thought process and treat documentation as part of the code, not an
                             afterthought.</p>
                     </div>
                     <div class="process-item">
-                        <h3>🚀 The Shipping</h3>
-                        <p>A project on a local drive helps no one. I prioritize deployment and usability, ensuring my
+                        <h3 data-i18n="process.ship_title">🚀 The Shipping</h3>
+                        <p data-i18n="process.ship_desc">A project on a local drive helps no one. I prioritize deployment and usability, ensuring my
                             tools work on the devices they were meant for, from job site tablets to desktop
                             workstations.</p>
                     </div>
@@ -361,24 +366,24 @@
         <!-- Why Me / Strengths -->
         <section id="strengths" class="section">
             <div class="container">
-                <h2 class="section-title">How I Think</h2>
+                <h2 class="section-title" data-i18n="strengths.title">How I Think</h2>
                 <div class="strengths-content">
-                    <p class="lead-text">I learned discipline in a trade where one bad measurement means tearing up
+                    <p class="lead-text" data-i18n="strengths.lead">I learned discipline in a trade where one bad measurement means tearing up
                         a road. That same precision drives how I write code.</p>
                     <div class="strengths-list">
                         <div class="strength-card">
-                            <h4>🏗️ Ship It</h4>
-                            <p>I finish what I start. 10+ projects live and working — not sitting in a local folder.
+                            <h4 data-i18n="strengths.s1_title">🏗️ Ship It</h4>
+                            <p data-i18n="strengths.s1_desc">I finish what I start. 10+ projects live and working — not sitting in a local folder.
                                 If I build it, I deploy it.</p>
                         </div>
                         <div class="strength-card">
-                            <h4>🔄 Learn by Building</h4>
-                            <p>I taught myself Python, AI agents, React, Flutter, and Godot by shipping real projects.
+                            <h4 data-i18n="strengths.s2_title">🔄 Learn by Building</h4>
+                            <p data-i18n="strengths.s2_desc">I taught myself Python, AI agents, React, Flutter, and Godot by shipping real projects.
                                 No bootcamp. No course certificates. Just working software.</p>
                         </div>
                         <div class="strength-card">
-                            <h4>🎯 Real Users First</h4>
-                            <p>My tools are built for people who actually need them — field workers, language learners,
+                            <h4 data-i18n="strengths.s3_title">🎯 Real Users First</h4>
+                            <p data-i18n="strengths.s3_desc">My tools are built for people who actually need them — field workers, language learners,
                                 developers who want privacy. Not hypothetical users.</p>
                         </div>
                     </div>
@@ -389,7 +394,7 @@
         <!-- Projects Section -->
         <section id="projects" class="section">
             <div class="container">
-                <h2 class="section-title">Projects</h2>
+                <h2 class="section-title" data-i18n="projects.title">Projects</h2>
                 <div class="projects-grid">
 
 
@@ -398,40 +403,40 @@
                         <div class="card-inner">
                             <div class="card-front">
                                 <div>
-                                    <h3>👻 Shadow Agent</h3>
+                                    <h3 data-i18n="projects.shadow_title">👻 Shadow Agent</h3>
                                     <div class="project-badges">
-                                        <span class="badge-pill">Sovereign AI</span>
-                                        <span class="badge-pill">Local Infrastructure</span>
+                                        <span class="badge-pill" data-i18n="projects.shadow_badge1">Sovereign AI</span>
+                                        <span class="badge-pill" data-i18n="projects.shadow_badge2">Local Infrastructure</span>
                                     </div>
-                                    <p class="project-description">
+                                    <p class="project-description" data-i18n="projects.shadow_desc">
                                         A Proactive Sovereign Agent that lives in the system tray. Unlike reactive
                                         chatbots, it
                                         acts before you ask. Built for a world where your data should never leave your device.
                                     </p>
                                 </div>
                                 <div class="flip-hint">
-                                    <i class="fas fa-sync-alt"></i> Flip for Details
+                                    <i class="fas fa-sync-alt"></i> <span data-i18n="projects.flip_hint">Flip for Details</span>
                                 </div>
                             </div>
                             <div class="card-back">
-                                <h3>Case Study</h3>
+                                <h3 data-i18n="projects.case_study">Case Study</h3>
                                 <ul class="project-features">
-                                    <li><strong>Zero-Latency</strong> Local Processing</li>
-                                    <li><strong>Proactive</strong> System Tray Agent</li>
+                                    <li data-i18n-html="projects.shadow_f1_html"><strong>Zero-Latency</strong> Local Processing</li>
+                                    <li data-i18n-html="projects.shadow_f2_html"><strong>Proactive</strong> System Tray Agent</li>
                                 </ul>
                                 <div class="project-case-study">
-                                    <div class="case-item"><strong>Problem:</strong> Cloud AI assistants compromise
+                                    <div class="case-item"><strong data-i18n="projects.problem">Problem:</strong> <span data-i18n="projects.shadow_problem">Cloud AI assistants compromise
                                         privacy,
-                                        leak sensitive data, and cannot perform local OS-level actions.</div>
-                                    <div class="case-item"><strong>Solution:</strong> A local-first "Sovereign Agent"
+                                        leak sensitive data, and cannot perform local OS-level actions.</span></div>
+                                    <div class="case-item"><strong data-i18n="projects.solution">Solution:</strong> <span data-i18n="projects.shadow_solution">A local-first "Sovereign Agent"
                                         that
                                         runs in the system tray, monitoring context to act proactively without data ever
-                                        leaving the device.</div>
-                                    <div class="case-item"><strong>Tech:</strong> Python 3.13, Ollama (Local LLMs),
+                                        leaving the device.</span></div>
+                                    <div class="case-item"><strong data-i18n="projects.tech">Tech:</strong> <span data-i18n="projects.shadow_tech">Python 3.13, Ollama (Local LLMs),
                                         System
-                                        Tray API, Secure Enclave Architecture.</div>
-                                    <div class="case-item"><strong>Impact:</strong> Delivers 100% data sovereignty and
-                                        automates background workflows with zero latency.</div>
+                                        Tray API, Secure Enclave Architecture.</span></div>
+                                    <div class="case-item"><strong data-i18n="projects.impact">Impact:</strong> <span data-i18n="projects.shadow_impact">Delivers 100% data sovereignty and
+                                        automates background workflows with zero latency.</span></div>
                                 </div>
                             </div>
                         </div>
@@ -442,45 +447,45 @@
                         <div class="card-inner">
                             <div class="card-front">
                                 <div>
-                                    <h3>🧠 Sovereign Mastermind / OS</h3>
+                                    <h3 data-i18n="projects.mastermind_title">🧠 Sovereign Mastermind / OS</h3>
                                     <div class="project-badges">
                                         <span class="badge-pill">Python 3.13</span>
                                         <span class="badge-pill">Local LLMs</span>
                                         <span class="badge-pill">Air-gapped</span>
                                     </div>
-                                    <p class="project-description">
+                                    <p class="project-description" data-i18n="projects.mastermind_desc">
                                         A production-ready, air-gapped AI core and local coding agent. Eliminates cloud
                                         telemetry risks with a Local-First RAG architecture.
                                     </p>
                                 </div>
                                 <div class="flip-hint">
-                                    <i class="fas fa-sync-alt"></i> Flip for Details
+                                    <i class="fas fa-sync-alt"></i> <span data-i18n="projects.flip_hint">Flip for Details</span>
                                 </div>
                             </div>
                             <div class="card-back">
-                                <h3>Case Study</h3>
+                                <h3 data-i18n="projects.case_study">Case Study</h3>
                                 <ul class="project-features">
-                                    <li><strong>Active Guardrails</strong> validating system changes</li>
-                                    <li><strong>Long-Term Memory</strong> via Vector DBs</li>
-                                    <li><strong>Plan-Execute-Verify</strong> autonomous loop</li>
+                                    <li data-i18n-html="projects.mastermind_f1_html"><strong>Active Guardrails</strong> validating system changes</li>
+                                    <li data-i18n-html="projects.mastermind_f2_html"><strong>Long-Term Memory</strong> via Vector DBs</li>
+                                    <li data-i18n-html="projects.mastermind_f3_html"><strong>Plan-Execute-Verify</strong> autonomous loop</li>
                                 </ul>
                                 <div class="project-case-study">
-                                    <div class="case-item"><strong>Problem:</strong> Cloud-based copilots exfiltrate
+                                    <div class="case-item"><strong data-i18n="projects.problem">Problem:</strong> <span data-i18n="projects.mastermind_problem">Cloud-based copilots exfiltrate
                                         proprietary code and lack awareness of local OS context or data sovereignty
-                                        laws.</div>
-                                    <div class="case-item"><strong>Solution:</strong> A self-hosted autonomous Python
+                                        laws.</span></div>
+                                    <div class="case-item"><strong data-i18n="projects.solution">Solution:</strong> <span data-i18n="projects.mastermind_solution">A self-hosted autonomous Python
                                         agent ("Sovereign Mastermind") that lives on the machine and acts as a localized
-                                        second developer.</div>
-                                    <div class="case-item"><strong>Tech:</strong> Python 3.13, PyAudio, ChromaDB,
-                                        Ollama, React 19 (for the marketing OS site).</div>
-                                    <div class="case-item"><strong>Impact:</strong> Provides full autonomous coding
+                                        second developer.</span></div>
+                                    <div class="case-item"><strong data-i18n="projects.tech">Tech:</strong> <span data-i18n="projects.mastermind_tech">Python 3.13, PyAudio, ChromaDB,
+                                        Ollama, React 19 (for the marketing OS site).</span></div>
+                                    <div class="case-item"><strong data-i18n="projects.impact">Impact:</strong> <span data-i18n="projects.mastermind_impact">Provides full autonomous coding
                                         power and document analysis while eliminating 100% of telemetry risks, logging
-                                        every action to an immutable audit ledger.</div>
+                                        every action to an immutable audit ledger.</span></div>
                                 </div>
                                 <div class="project-links">
                                     <a href="https://sovereign-os-web.pages.dev/" target="_blank"
                                         rel="noopener noreferrer" class="btn small"><i
-                                            class="fas fa-external-link-alt"></i> Live Site</a>
+                                            class="fas fa-external-link-alt"></i> <span data-i18n="projects.live_site">Live Site</span></a>
                                 </div>
                             </div>
                         </div>
@@ -491,46 +496,46 @@
                         <div class="card-inner">
                             <div class="card-front">
                                 <div>
-                                    <h3>🛡️ GrabenGeist</h3>
+                                    <h3 data-i18n="projects.graben_title">🛡️ GrabenGeist</h3>
                                     <div class="project-badges">
-                                        <span class="badge-pill">Construction</span>
-                                        <span class="badge-pill">In Progress</span>
+                                        <span class="badge-pill" data-i18n="projects.graben_badge1">Construction</span>
+                                        <span class="badge-pill" data-i18n="projects.graben_badge2">In Progress</span>
                                     </div>
-                                    <p class="project-description">
+                                    <p class="project-description" data-i18n="projects.graben_desc">
                                         A specialized tool for construction safety and management. Currently in active
                                         development, bringing digital precision to trench work.
                                     </p>
                                 </div>
                                 <div class="flip-hint">
-                                    <i class="fas fa-sync-alt"></i> Flip for Details
+                                    <i class="fas fa-sync-alt"></i> <span data-i18n="projects.flip_hint">Flip for Details</span>
                                 </div>
                             </div>
                             <div class="card-back">
-                                <h3>Case Study</h3>
+                                <h3 data-i18n="projects.case_study">Case Study</h3>
                                 <ul class="project-features">
-                                    <li>Safety Monitoring</li>
-                                    <li>Real-time Data</li>
-                                    <li>Construction Logistics</li>
+                                    <li data-i18n="projects.graben_f1">Safety Monitoring</li>
+                                    <li data-i18n="projects.graben_f2">Real-time Data</li>
+                                    <li data-i18n="projects.graben_f3">Construction Logistics</li>
                                 </ul>
 
                                 <div class="project-case-study">
-                                    <div class="case-item"><strong>Problem:</strong> Trench safety relies on slow paper
+                                    <div class="case-item"><strong data-i18n="projects.problem">Problem:</strong> <span data-i18n="projects.graben_problem">Trench safety relies on slow paper
                                         checklists and manual oversight, leading to delayed hazard responses and
                                         regulatory
-                                        risks.</div>
-                                    <div class="case-item"><strong>Solution:</strong> A digital site supervisor that
+                                        risks.</span></div>
+                                    <div class="case-item"><strong data-i18n="projects.solution">Solution:</strong> <span data-i18n="projects.graben_solution">A digital site supervisor that
                                         tracks
                                         real-time safety metrics, digitizes logs immediately, and enforces protocol
-                                        compliance.</div>
-                                    <div class="case-item"><strong>Tech:</strong> React, Real-time Database (Supabase),
-                                        Mobile-Responsive UI.</div>
-                                    <div class="case-item"><strong>Impact:</strong> Reduces incident reporting time by
+                                        compliance.</span></div>
+                                    <div class="case-item"><strong data-i18n="projects.tech">Tech:</strong> <span data-i18n="projects.graben_tech">React, Real-time Database (Supabase),
+                                        Mobile-Responsive UI.</span></div>
+                                    <div class="case-item"><strong data-i18n="projects.impact">Impact:</strong> <span data-i18n="projects.graben_impact">Reduces incident reporting time by
                                         90%
-                                        and ensures auditable safety compliance.</div>
+                                        and ensures auditable safety compliance.</span></div>
                                 </div>
                                 <div class="project-links">
                                     <a href="https://github.com/Lakhouane-Mehdi" target="_blank" rel="noopener noreferrer"
-                                        class="btn small"><i class="fas fa-code"></i> View Code/Demo</a>
+                                        class="btn small"><i class="fas fa-code"></i> <span data-i18n="projects.view_code">View Code/Demo</span></a>
                                 </div>
                             </div>
                         </div>
@@ -541,45 +546,45 @@
                         <div class="card-inner">
                             <div class="card-front">
                                 <div>
-                                    <h3>ⵣ Awal Dictionary</h3>
+                                    <h3 data-i18n="projects.awal_title">ⵣ Awal Dictionary</h3>
                                     <div class="project-badges">
-                                        <span class="badge-pill">PWA</span>
-                                        <span class="badge-pill">Cultural Tech</span>
+                                        <span class="badge-pill" data-i18n="projects.awal_badge1">PWA</span>
+                                        <span class="badge-pill" data-i18n="projects.awal_badge2">Cultural Tech</span>
                                     </div>
-                                    <p class="project-description">
+                                    <p class="project-description" data-i18n="projects.awal_desc">
                                         A comprehensive digital dictionary for the Tamazight language (Zaouiat Ahansal
                                         dialect).
                                         Built as a high-performance PWA that works offline and installs on any device.
                                     </p>
                                 </div>
                                 <div class="flip-hint">
-                                    <i class="fas fa-sync-alt"></i> Flip for Details
+                                    <i class="fas fa-sync-alt"></i> <span data-i18n="projects.flip_hint">Flip for Details</span>
                                 </div>
                             </div>
                             <div class="card-back">
-                                <h3>Case Study</h3>
+                                <h3 data-i18n="projects.case_study">Case Study</h3>
                                 <ul class="project-features">
-                                    <li>Fast Search Algorithm</li>
-                                    <li>Offline Capable (PWA)</li>
+                                    <li data-i18n="projects.awal_f1">Fast Search Algorithm</li>
+                                    <li data-i18n="projects.awal_f2">Offline Capable (PWA)</li>
                                 </ul>
                                 <div class="project-case-study">
-                                    <div class="case-item"><strong>Problem:</strong> The Tamazight language (Middle
+                                    <div class="case-item"><strong data-i18n="projects.problem">Problem:</strong> <span data-i18n="projects.awal_problem">The Tamazight language (Middle
                                         Atlas
                                         dialect) lacks accessible, offline-capable digital resources, risking cultural
-                                        erosion.</div>
-                                    <div class="case-item"><strong>Solution:</strong> A high-performance Progressive Web
+                                        erosion.</span></div>
+                                    <div class="case-item"><strong data-i18n="projects.solution">Solution:</strong> <span data-i18n="projects.awal_solution">A high-performance Progressive Web
                                         App
-                                        (PWA) with a custom root-based search algorithm available 100% offline.</div>
-                                    <div class="case-item"><strong>Tech:</strong> Vanilla JavaScript, Service Workers
+                                        (PWA) with a custom root-based search algorithm available 100% offline.</span></div>
+                                    <div class="case-item"><strong data-i18n="projects.tech">Tech:</strong> <span data-i18n="projects.awal_tech">Vanilla JavaScript, Service Workers
                                         (PWA),
-                                        JSON, CSS3.</div>
-                                    <div class="case-item"><strong>Impact:</strong> Provides instant, offline access to
-                                        2000+ roots, preserving cultural heritage on any device.</div>
+                                        JSON, CSS3.</span></div>
+                                    <div class="case-item"><strong data-i18n="projects.impact">Impact:</strong> <span data-i18n="projects.awal_impact">Provides instant, offline access to
+                                        2000+ roots, preserving cultural heritage on any device.</span></div>
                                 </div>
                                 <div class="project-links">
                                     <a href="https://awal-dictionary-app.web.app/" target="_blank"
                                         rel="noopener noreferrer" class="btn small primary"><i
-                                            class="fas fa-external-link-alt"></i> Open App</a>
+                                            class="fas fa-external-link-alt"></i> <span data-i18n="projects.open_app">Open App</span></a>
                                 </div>
                             </div>
                         </div>
@@ -589,47 +594,47 @@
                         <div class="card-inner">
                             <div class="card-front">
                                 <div>
-                                    <h3>🔍 RebarSight</h3>
+                                    <h3 data-i18n="projects.rebar_title">🔍 RebarSight</h3>
                                     <div class="project-badges">
-                                        <span class="badge-pill">🏗️ Tested on real sites</span>
-                                        <span class="badge-pill">🖥️ Windows Native</span>
+                                        <span class="badge-pill" data-i18n="projects.rebar_badge1">🏗️ Tested on real sites</span>
+                                        <span class="badge-pill" data-i18n="projects.rebar_badge2">🖥️ Windows Native</span>
                                     </div>
-                                    <p class="project-description">
+                                    <p class="project-description" data-i18n="projects.rebar_desc">
                                         A Windows desktop tool that uses Computer Vision to automatically measure
                                         spacing from site photos.
                                     </p>
                                 </div>
                                 <div class="flip-hint">
-                                    <i class="fas fa-sync-alt"></i> Flip for Details
+                                    <i class="fas fa-sync-alt"></i> <span data-i18n="projects.flip_hint">Flip for Details</span>
                                 </div>
                             </div>
                             <div class="card-back">
-                                <h3>Case Study</h3>
+                                <h3 data-i18n="projects.case_study">Case Study</h3>
                                 <ul class="project-features">
-                                    <li>Python 3.13 & OpenCV</li>
-                                    <li>No Installation Required</li>
-                                    <li>Automated PDF Reports</li>
+                                    <li data-i18n="projects.rebar_f1">Python 3.13 & OpenCV</li>
+                                    <li data-i18n="projects.rebar_f2">No Installation Required</li>
+                                    <li data-i18n="projects.rebar_f3">Automated PDF Reports</li>
                                 </ul>
                                 <div class="project-case-study">
-                                    <div class="case-item"><strong>Problem:</strong> Manual "eyeball" inspections of
+                                    <div class="case-item"><strong data-i18n="projects.problem">Problem:</strong> <span data-i18n="projects.rebar_problem">Manual "eyeball" inspections of
                                         rebar
                                         spacing are prone to human error, leading to failed structural inspections and
                                         $10k+
-                                        rework costs.</div>
-                                    <div class="case-item"><strong>Solution:</strong> A Windows desktop tool that uses
+                                        rework costs.</span></div>
+                                    <div class="case-item"><strong data-i18n="projects.solution">Solution:</strong> <span data-i18n="projects.rebar_solution">A Windows desktop tool that uses
                                         Computer Vision to automatically measure spacing from site photos and generate
                                         PDF
-                                        reports.</div>
-                                    <div class="case-item"><strong>Tech:</strong> Python 3.13, OpenCV, ReportLab,
-                                        Tkinter.
+                                        reports.</span></div>
+                                    <div class="case-item"><strong data-i18n="projects.tech">Tech:</strong> <span data-i18n="projects.rebar_tech">Python 3.13, OpenCV, ReportLab,
+                                        Tkinter.</span>
                                     </div>
-                                    <div class="case-item"><strong>Impact:</strong> Detects measurement errors in under
+                                    <div class="case-item"><strong data-i18n="projects.impact">Impact:</strong> <span data-i18n="projects.rebar_impact">Detects measurement errors in under
                                         60
-                                        seconds, preventing costly concrete rework.</div>
+                                        seconds, preventing costly concrete rework.</span></div>
                                 </div>
                                 <div class="project-links">
                                     <a href="https://github.com/Lakhouane-Mehdi" target="_blank" rel="noopener noreferrer"
-                                        class="btn small secondary"><i class="fab fa-github"></i> View on GitHub</a>
+                                        class="btn small secondary"><i class="fab fa-github"></i> <span data-i18n="projects.view_github">View on GitHub</span></a>
                                 </div>
                             </div>
                         </div>
@@ -640,44 +645,44 @@
                         <div class="card-inner">
                             <div class="card-front">
                                 <div>
-                                    <h3>🚧 Asphalt Calculator</h3>
-                                    <p class="project-description">A professional asphalt estimation tool built from
+                                    <h3 data-i18n="projects.asphalt_title">🚧 Asphalt Calculator</h3>
+                                    <p class="project-description" data-i18n="projects.asphalt_desc">A professional asphalt estimation tool built from
                                         real
                                         construction experience. Calculates area, volume, weight, and logistic
                                         requirements.</p>
                                 </div>
                                 <div class="flip-hint">
-                                    <i class="fas fa-sync-alt"></i> Flip for Details
+                                    <i class="fas fa-sync-alt"></i> <span data-i18n="projects.flip_hint">Flip for Details</span>
                                 </div>
                             </div>
                             <div class="card-back">
-                                <h3>Case Study</h3>
+                                <h3 data-i18n="projects.case_study">Case Study</h3>
                                 <ul class="project-features">
-                                    <li>Area & Volume Calculations</li>
-                                    <li>Thickness & Density Customization</li>
-                                    <li>Logistics & Regional Pricing</li>
+                                    <li data-i18n="projects.asphalt_f1">Area & Volume Calculations</li>
+                                    <li data-i18n="projects.asphalt_f2">Thickness & Density Customization</li>
+                                    <li data-i18n="projects.asphalt_f3">Logistics & Regional Pricing</li>
                                 </ul>
                                 <div class="project-case-study">
-                                    <div class="case-item"><strong>Problem:</strong> Generic calculators fail to account
+                                    <div class="case-item"><strong data-i18n="projects.problem">Problem:</strong> <span data-i18n="projects.asphalt_problem">Generic calculators fail to account
                                         for
                                         asphalt variation (density, compaction loss), causing costly material shortages
                                         or
-                                        waste.</div>
-                                    <div class="case-item"><strong>Solution:</strong> A specialized web estimator using
+                                        waste.</span></div>
+                                    <div class="case-item"><strong data-i18n="projects.solution">Solution:</strong> <span data-i18n="projects.asphalt_solution">A specialized web estimator using
                                         industry-standard density formulas to calculate exact tonnage, cost, and
-                                        logistics.
+                                        logistics.</span>
                                     </div>
-                                    <div class="case-item"><strong>Tech:</strong> JavaScript, HTML5/CSS3, DOM
-                                        Manipulation.
+                                    <div class="case-item"><strong data-i18n="projects.tech">Tech:</strong> <span data-i18n="projects.asphalt_tech">JavaScript, HTML5/CSS3, DOM
+                                        Manipulation.</span>
                                     </div>
-                                    <div class="case-item"><strong>Impact:</strong> Reduces material waste by ~15% and
-                                        ensures precise ordering for large-scale road projects.</div>
+                                    <div class="case-item"><strong data-i18n="projects.impact">Impact:</strong> <span data-i18n="projects.asphalt_impact">Reduces material waste by ~15% and
+                                        ensures precise ordering for large-scale road projects.</span></div>
                                 </div>
                                 <div class="project-links">
                                     <a href="https://asphalt-calculator-eight.vercel.app/" target="_blank"
                                         rel="noopener noreferrer" class="btn small"><i
                                             class="fas fa-external-link-alt"></i>
-                                        Live Demo</a>
+                                        <span data-i18n="projects.live_demo">Live Demo</span></a>
                                     <!-- Add GitHub link if available specifically for this repo, otherwise general profile -->
                                 </div>
                             </div>
@@ -689,37 +694,37 @@
                         <div class="card-inner">
                             <div class="card-front">
                                 <div>
-                                    <h3>🎮 Game Development Projects (Godot)</h3>
-                                    <p class="project-description">Built and fully finished multiple game projects,
+                                    <h3 data-i18n="projects.godot_title">🎮 Game Development Projects (Godot)</h3>
+                                    <p class="project-description" data-i18n="projects.godot_desc">Built and fully finished multiple game projects,
                                         demonstrating complete lifecycle development from concept to polish.</p>
                                 </div>
                                 <div class="flip-hint">
-                                    <i class="fas fa-sync-alt"></i> Flip for Details
+                                    <i class="fas fa-sync-alt"></i> <span data-i18n="projects.flip_hint">Flip for Details</span>
                                 </div>
                             </div>
                             <div class="card-back">
-                                <h3>Case Study</h3>
+                                <h3 data-i18n="projects.case_study">Case Study</h3>
                                 <ul class="project-features">
-                                    <li>Movement Systems</li>
-                                    <li>UI Interactions</li>
+                                    <li data-i18n="projects.godot_f1">Movement Systems</li>
+                                    <li data-i18n="projects.godot_f2">UI Interactions</li>
                                 </ul>
                                 <div class="project-case-study">
-                                    <div class="case-item"><strong>Problem:</strong> Many game projects fail due to poor
-                                        architecture, becoming unmaintainable "spaghetti code" as complexity grows.
+                                    <div class="case-item"><strong data-i18n="projects.problem">Problem:</strong> <span data-i18n="projects.godot_problem">Many game projects fail due to poor
+                                        architecture, becoming unmaintainable "spaghetti code" as complexity grows.</span>
                                     </div>
-                                    <div class="case-item"><strong>Solution:</strong> "Neon Quadrants" — A complete,
+                                    <div class="case-item"><strong data-i18n="projects.solution">Solution:</strong> <span data-i18n="projects.godot_solution">"Neon Quadrants" — A complete,
                                         polished arcade suite built with modular architecture to handle multiple game
                                         modes
-                                        seamlessly.</div>
-                                    <div class="case-item"><strong>Tech:</strong> Godot Engine, GDScript, Finite State
-                                        Machines, Particle Systems.</div>
-                                    <div class="case-item"><strong>Learnings:</strong> Managing complex game state,
+                                        seamlessly.</span></div>
+                                    <div class="case-item"><strong data-i18n="projects.tech">Tech:</strong> <span data-i18n="projects.godot_tech">Godot Engine, GDScript, Finite State
+                                        Machines, Particle Systems.</span></div>
+                                    <div class="case-item"><strong data-i18n="projects.learnings">Learnings:</strong> <span data-i18n="projects.godot_learnings">Managing complex game state,
                                         implementing "Game Feel" (juice/feedback), and profiling performance for smooth
-                                        60FPS.</div>
+                                        60FPS.</span></div>
                                 </div>
                                 <div class="project-links">
                                     <a href="https://github.com/Lakhouane-Mehdi" target="_blank" rel="noopener noreferrer"
-                                        class="btn small secondary"><i class="fab fa-github"></i> View on GitHub</a>
+                                        class="btn small secondary"><i class="fab fa-github"></i> <span data-i18n="projects.view_github">View on GitHub</span></a>
                                 </div>
                             </div>
                         </div>
@@ -730,34 +735,34 @@
                         <div class="card-inner">
                             <div class="card-front">
                                 <div>
-                                    <h3>🤖 AI Learning Projects</h3>
-                                    <p class="project-description">Exploration of AI logic, behavior, and practical
+                                    <h3 data-i18n="projects.ai_title">🤖 AI Learning Projects</h3>
+                                    <p class="project-description" data-i18n="projects.ai_desc">Exploration of AI logic, behavior, and practical
                                         applications
                                         using open-source models.</p>
                                 </div>
                                 <div class="flip-hint">
-                                    <i class="fas fa-sync-alt"></i> Flip for Details
+                                    <i class="fas fa-sync-alt"></i> <span data-i18n="projects.flip_hint">Flip for Details</span>
                                 </div>
                             </div>
                             <div class="card-back">
-                                <h3>Case Study</h3>
+                                <h3 data-i18n="projects.case_study">Case Study</h3>
                                 <div class="project-case-study">
-                                    <div class="case-item"><strong>Problem:</strong> Theoretical knowledge of AI isn't
+                                    <div class="case-item"><strong data-i18n="projects.problem">Problem:</strong> <span data-i18n="projects.ai_problem">Theoretical knowledge of AI isn't
                                         enough; understanding the practical limitations of LLMs requires hands-on
-                                        testing.
+                                        testing.</span>
                                     </div>
-                                    <div class="case-item"><strong>Solution:</strong> A repository of experiments
+                                    <div class="case-item"><strong data-i18n="projects.solution">Solution:</strong> <span data-i18n="projects.ai_solution">A repository of experiments
                                         dissecting
-                                        model behavior, prompt engineering logic, and API integration patterns.</div>
-                                    <div class="case-item"><strong>Tech:</strong> Python, PyTorch (Basics), OpenAI API,
-                                        Hugging Face.</div>
-                                    <div class="case-item"><strong>Learnings:</strong> The difference between stochastic
+                                        model behavior, prompt engineering logic, and API integration patterns.</span></div>
+                                    <div class="case-item"><strong data-i18n="projects.tech">Tech:</strong> <span data-i18n="projects.ai_tech">Python, PyTorch (Basics), OpenAI API,
+                                        Hugging Face.</span></div>
+                                    <div class="case-item"><strong data-i18n="projects.learnings">Learnings:</strong> <span data-i18n="projects.ai_learnings">The difference between stochastic
                                         generation and deterministic logic, and how to constrain AI outputs for reliable
-                                        software.</div>
+                                        software.</span></div>
                                 </div>
                                 <div class="project-links">
                                     <a href="https://github.com/Lakhouane-Mehdi" target="_blank" rel="noopener noreferrer"
-                                        class="btn small secondary"><i class="fab fa-github"></i> View on GitHub</a>
+                                        class="btn small secondary"><i class="fab fa-github"></i> <span data-i18n="projects.view_github">View on GitHub</span></a>
                                 </div>
                             </div>
                         </div>
@@ -769,81 +774,81 @@
         <!-- Project Gallery Section -->
         <section id="gallery" class="section alt-bg">
             <div class="container">
-                <h2 class="section-title">Project Previews</h2>
+                <h2 class="section-title" data-i18n="gallery.title">Project Previews</h2>
                 <div class="gallery-grid">
                     <div class="gallery-item">
                         <a href="https://github.com/Lakhouane-Mehdi/Ethry" target="_blank" rel="noopener noreferrer">
                             <div class="gallery-img-wrapper">
-                                <img src="images/Ethry.png" alt="Ethry RPG Game Interface" width="600"
+                                <img src="/images/Ethry.png" alt="Ethry RPG Game Interface" width="600"
                                     height="337" loading="lazy">
                                 <div class="gallery-overlay">
                                     <i class="fab fa-github"></i>
                                 </div>
                             </div>
-                            <h3>Ethry (2D Action RPG)</h3>
+                            <h3 data-i18n="gallery.ethry">Ethry (2D Action RPG)</h3>
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="https://asphalt-calculator-eight.vercel.app/" target="_blank"
                             rel="noopener noreferrer">
                             <div class="gallery-img-wrapper">
-                                <img src="images/Asphalt_calculator.png" alt="Asphalt Calculator Interface" width="600"
+                                <img src="/images/Asphalt_calculator.png" alt="Asphalt Calculator Interface" width="600"
                                     height="337" loading="lazy">
                                 <div class="gallery-overlay">
                                     <i class="fas fa-external-link-alt"></i>
                                 </div>
                             </div>
-                            <h3>Asphalt Calculator</h3>
+                            <h3 data-i18n="gallery.asphalt">Asphalt Calculator</h3>
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="https://awal-dictionary-app.web.app/" target="_blank" rel="noopener noreferrer">
                             <div class="gallery-img-wrapper">
-                                <img src="images/Awal_Dictionary.png" alt="Awal Dictionary App Interface" width="600"
+                                <img src="/images/Awal_Dictionary.png" alt="Awal Dictionary App Interface" width="600"
                                     height="337" loading="lazy">
                                 <div class="gallery-overlay">
                                     <i class="fas fa-external-link-alt"></i>
                                 </div>
                             </div>
-                            <h3>Awal Dictionary</h3>
+                            <h3 data-i18n="gallery.awal">Awal Dictionary</h3>
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="https://sovereign-os-web.pages.dev/" target="_blank" rel="noopener noreferrer">
                             <div class="gallery-img-wrapper">
-                                <img src="images/sovereign_agent_home.png" alt="Sovereign Mastermind Interface"
+                                <img src="/images/sovereign_agent_home.png" alt="Sovereign Mastermind Interface"
                                     width="600" height="337" loading="lazy">
                                 <div class="gallery-overlay">
                                     <i class="fas fa-external-link-alt"></i>
                                 </div>
                             </div>
-                            <h3>Sovereign Mastermind</h3>
+                            <h3 data-i18n="gallery.sovereign">Sovereign Mastermind</h3>
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="screenshots.html#app">
                             <div class="gallery-img-wrapper">
-                                <img src="images/sovereign_mastermind_app.png"
+                                <img src="/images/sovereign_mastermind_app.png"
                                     alt="Sovereign Mastermind Desktop App - Home Screen" width="600" height="337"
                                     loading="lazy">
                                 <div class="gallery-overlay">
                                     <i class="fas fa-expand-alt"></i>
                                 </div>
                             </div>
-                            <h3>Sovereign Mastermind — App</h3>
+                            <h3 data-i18n="gallery.sov_app">Sovereign Mastermind — App</h3>
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="screenshots.html#chat">
                             <div class="gallery-img-wrapper">
-                                <img src="images/sovereign_mastermind_chat.png"
+                                <img src="/images/sovereign_mastermind_chat.png"
                                     alt="Sovereign Mastermind Desktop App - Chat Interface" width="600" height="337"
                                     loading="lazy">
                                 <div class="gallery-overlay">
                                     <i class="fas fa-expand-alt"></i>
                                 </div>
                             </div>
-                            <h3>Sovereign Mastermind — Chat</h3>
+                            <h3 data-i18n="gallery.sov_chat">Sovereign Mastermind — Chat</h3>
                         </a>
                     </div>
                 </div>
@@ -853,27 +858,27 @@
         <!-- Languages -->
         <section id="languages" class="section">
             <div class="container">
-                <h2 class="section-title">Languages</h2>
+                <h2 class="section-title" data-i18n="languages.title">Languages</h2>
                 <div class="languages-grid">
                     <div class="lang-item">
-                        <span class="lang-name">Arabic</span>
-                        <span class="lang-level">Native</span>
+                        <span class="lang-name" data-i18n="languages.arabic">Arabic</span>
+                        <span class="lang-level" data-i18n="languages.arabic_lvl">Native</span>
                     </div>
                     <div class="lang-item">
-                        <span class="lang-name">Tamazight</span>
-                        <span class="lang-level">Native (Middle Atlas)</span>
+                        <span class="lang-name" data-i18n="languages.tamazight">Tamazight</span>
+                        <span class="lang-level" data-i18n="languages.tamazight_lvl">Native (Middle Atlas)</span>
                     </div>
                     <div class="lang-item">
-                        <span class="lang-name">English</span>
-                        <span class="lang-level">Advanced</span>
+                        <span class="lang-name" data-i18n="languages.english">English</span>
+                        <span class="lang-level" data-i18n="languages.english_lvl">Advanced</span>
                     </div>
                     <div class="lang-item">
-                        <span class="lang-name">French</span>
-                        <span class="lang-level">Advanced</span>
+                        <span class="lang-name" data-i18n="languages.french">French</span>
+                        <span class="lang-level" data-i18n="languages.french_lvl">Advanced</span>
                     </div>
                     <div class="lang-item">
-                        <span class="lang-name">German</span>
-                        <span class="lang-level">Basic to Intermediate</span>
+                        <span class="lang-name" data-i18n="languages.german">German</span>
+                        <span class="lang-level" data-i18n="languages.german_lvl">Basic to Intermediate</span>
                     </div>
                 </div>
             </div>
@@ -882,27 +887,27 @@
         <!-- Current Focus -->
         <section id="goals" class="section">
             <div class="container">
-                <h2 class="section-title">Current Focus</h2>
+                <h2 class="section-title" data-i18n="goals.title">Current Focus</h2>
                 <div class="goals-content">
                     <div class="goal-column">
-                        <h3><i class="fas fa-rocket"></i> Building Now</h3>
-                        <p class="goal-status-text">
+                        <h3><i class="fas fa-rocket"></i> <span data-i18n="goals.build_title">Building Now</span></h3>
+                        <p class="goal-status-text" data-i18n="goals.build_status">
                             Actively shipping projects across AI, web, mobile, and games.
                         </p>
                         <ul>
-                            <li><strong>Sovereign AI</strong> — Expanding local-first agents with long-term memory and autonomous workflows</li>
-                            <li><strong>Mobile Apps</strong> — Developing with Flutter and Android Native (Kotlin)</li>
-                            <li><strong>Game Dev</strong> — Building new titles in Godot with modular architecture</li>
-                            <li><strong>Construction Tech</strong> — GrabenGeist and RebarSight in active development</li>
+                            <li data-i18n-html="goals.build_li1_html"><strong>Sovereign AI</strong> — Expanding local-first agents with long-term memory and autonomous workflows</li>
+                            <li data-i18n-html="goals.build_li2_html"><strong>Mobile Apps</strong> — Developing with Flutter and Android Native (Kotlin)</li>
+                            <li data-i18n-html="goals.build_li3_html"><strong>Game Dev</strong> — Building new titles in Godot with modular architecture</li>
+                            <li data-i18n-html="goals.build_li4_html"><strong>Construction Tech</strong> — GrabenGeist and RebarSight in active development</li>
                         </ul>
                     </div>
                     <div class="goal-column">
-                        <h3><i class="fas fa-compass"></i> Open To</h3>
+                        <h3><i class="fas fa-compass"></i> <span data-i18n="goals.open_title">Open To</span></h3>
                         <ul>
-                            <li><strong>Collaborations</strong> on open-source or indie projects</li>
-                            <li><strong>Freelance work</strong> in web, mobile, or AI tooling</li>
-                            <li><strong>Partnerships</strong> with people who build things that matter</li>
-                            <li><strong>Interesting problems</strong> — if it's real and needs solving, I'm in</li>
+                            <li data-i18n-html="goals.open_li1_html"><strong>Collaborations</strong> on open-source or indie projects</li>
+                            <li data-i18n-html="goals.open_li2_html"><strong>Freelance work</strong> in web, mobile, or AI tooling</li>
+                            <li data-i18n-html="goals.open_li3_html"><strong>Partnerships</strong> with people who build things that matter</li>
+                            <li data-i18n-html="goals.open_li4_html"><strong>Interesting problems</strong> — if it's real and needs solving, I'm in</li>
                         </ul>
                     </div>
                 </div>
@@ -912,13 +917,13 @@
         <!-- Behind the Build -->
         <section id="story" class="section alt-bg">
             <div class="container">
-                <h2 class="section-title">Behind the Build</h2>
+                <h2 class="section-title" data-i18n="story.title">Behind the Build</h2>
                 <div class="story-content">
-                    <blockquote>
+                    <blockquote data-i18n="story.quote">
                         "I built RebarSight because I saw a contractor break out concrete due to rebar spacing errors.
                         4 weeks later — it’s ready."
                     </blockquote>
-                    <p>This isn't just code — it's a tool born from watching real money get wasted
+                    <p data-i18n="story.p">This isn't just code — it's a tool born from watching real money get wasted
                         on a real job site. That's why I build.</p>
                 </div>
             </div>
@@ -927,11 +932,32 @@
         <!-- Contact Section -->
         <section id="contact" class="section footer-section">
             <div class="container">
-                <h2 class="section-title">Let's Build Something Useful</h2>
+                <h2 class="section-title" data-i18n="contact.title">Let's Build Something Useful</h2>
                 <div class="contact-card">
-                    <a href="mailto:leoamazigh@gmail.com" class="btn primary cta-btn">
-                        ✉️ Send me an Email
-                    </a>
+                    <form id="contact-form" class="contact-form" novalidate>
+                        <div class="field">
+                            <label for="cf-name" data-i18n="contact.name">Name</label>
+                            <input id="cf-name" name="name" type="text" required minlength="2" maxlength="100" autocomplete="name">
+                        </div>
+                        <div class="field">
+                            <label for="cf-email" data-i18n="contact.email">Email</label>
+                            <input id="cf-email" name="email" type="email" required maxlength="200" autocomplete="email">
+                        </div>
+                        <div class="field">
+                            <label for="cf-message" data-i18n="contact.message">Message</label>
+                            <textarea id="cf-message" name="message" rows="5" required minlength="10" maxlength="5000"></textarea>
+                        </div>
+                        <div class="field hp" aria-hidden="true">
+                            <label for="cf-website" data-i18n="contact.hp_label">Website (leave empty)</label>
+                            <input id="cf-website" name="website" type="text" tabindex="-1" autocomplete="off">
+                        </div>
+                        <label class="consent-check">
+                            <input id="cf-consent" name="consent" type="checkbox" required>
+                            <span data-i18n-html="contact.consent_html">I agree that my data (name, email, message) is stored in order to reply. See <a href="/datenschutz.html">Datenschutz</a>.</span>
+                        </label>
+                        <button type="submit" class="btn primary cta-btn" id="cf-submit" data-i18n="contact.submit">Send message</button>
+                        <p id="cf-status" class="cf-status" role="status" aria-live="polite"></p>
+                    </form>
                     <a href="https://github.com/Lakhouane-Mehdi" target="_blank" rel="noopener noreferrer"
                         class="contact-link">
                         <i class="fab fa-github"></i>
@@ -939,27 +965,21 @@
                     </a>
                     <div class="contact-location">
                         <i class="fas fa-map-marker-alt"></i>
-                        <span>Frankfurt am Main, Germany</span>
+                        <span data-i18n="contact.location">Frankfurt am Main, Germany</span>
                     </div>
                 </div>
                 <footer class="footer">
-                    <p>&copy; 2026 Mehdi Lakhouane. Built with precision.</p>
+                    <p data-i18n="footer.copyright">&copy; 2026 Mehdi Lakhouane. Built with precision.</p>
                     <p class="legal-links">
-                        <a href="/impressum.html">Impressum</a> ·
-                        <a href="/datenschutz.html">Datenschutz</a>
+                        <a href="/impressum.html" data-i18n="footer.impressum">Impressum</a> ·
+                        <a href="/datenschutz.html" data-i18n="footer.datenschutz">Datenschutz</a> ·
+                        <button type="button" id="cookie-settings" class="link-like" data-i18n="footer.cookie_settings">Cookie-Einstellungen</button>
                     </p>
                 </footer>
             </div>
         </section>
     </main>
 
-    <!-- Lightbox Modal -->
-    <div id="lightbox" class="lightbox-overlay">
-        <button class="lightbox-close" aria-label="Close">&times;</button>
-        <img class="lightbox-img" src="" alt="Full preview">
-    </div>
-
-    <script src="script.js"></script>
     <script type="module" src="/src/main.js"></script>
 </body>
 
