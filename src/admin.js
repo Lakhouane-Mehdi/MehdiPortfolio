@@ -9,8 +9,19 @@ function escapeHtml(s = '') {
   return s.replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]))
 }
 
-async function loadMessages(token) {
-  const res = await fetch('/api/messages', { headers: { Authorization: `Bearer ${token}` } })
+// Always fetch with a fresh access token — a token captured at render time
+// expires after ~1h and requests would silently fail.
+async function authFetch(url, opts = {}) {
+  const { data: { session } } = await supabase.auth.getSession()
+  if (!session) throw new Error('Session expired — please sign in again.')
+  return fetch(url, {
+    ...opts,
+    headers: { ...(opts.headers || {}), Authorization: `Bearer ${session.access_token}` }
+  })
+}
+
+async function loadMessages() {
+  const res = await authFetch('/api/messages')
   if (!res.ok) throw new Error(`messages ${res.status}`)
   const { messages } = await res.json()
   const list = document.getElementById('messages-list')
@@ -44,21 +55,25 @@ async function loadMessages(token) {
 
   list.querySelectorAll('[data-read]').forEach(btn => {
     btn.addEventListener('click', async () => {
-      await fetch(`/api/messages?id=${btn.dataset.read}`, {
-        method: 'POST',
-        headers: { Authorization: `Bearer ${token}` }
-      })
-      loadMessages(token)
+      try {
+        const res = await authFetch(`/api/messages?id=${btn.dataset.read}`, { method: 'POST' })
+        if (!res.ok && res.status !== 204) throw new Error(`mark read failed (${res.status})`)
+        await loadMessages()
+      } catch (err) {
+        alert(err.message)
+      }
     })
   })
   list.querySelectorAll('[data-delete]').forEach(btn => {
     btn.addEventListener('click', async () => {
       if (!confirm('Delete this message?')) return
-      await fetch(`/api/messages?id=${btn.dataset.delete}`, {
-        method: 'DELETE',
-        headers: { Authorization: `Bearer ${token}` }
-      })
-      loadMessages(token)
+      try {
+        const res = await authFetch(`/api/messages?id=${btn.dataset.delete}`, { method: 'DELETE' })
+        if (!res.ok && res.status !== 204) throw new Error(`delete failed (${res.status})`)
+        await loadMessages()
+      } catch (err) {
+        alert(err.message)
+      }
     })
   })
 }
@@ -69,9 +84,7 @@ async function renderDashboard(session) {
   who.textContent = `Signed in as ${session.user.email}`
 
   try {
-    const res = await fetch('/api/stats', {
-      headers: { Authorization: `Bearer ${session.access_token}` }
-    })
+    const res = await authFetch('/api/stats')
     if (res.status === 403) {
       dashboard.innerHTML = '<p>Your account is not allow-listed as admin.</p>'
       return
@@ -92,7 +105,7 @@ async function renderDashboard(session) {
       tbody.appendChild(tr)
     }
 
-    await loadMessages(session.access_token)
+    await loadMessages()
   } catch (err) {
     console.error(err)
     dashboard.insertAdjacentHTML('beforeend', `<p class="muted">Failed to load: ${err.message}</p>`)

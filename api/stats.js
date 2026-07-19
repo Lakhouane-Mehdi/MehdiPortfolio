@@ -24,10 +24,14 @@ export default async function handler(req, res) {
   const { data: adminRow } = await admin.from('admins').select('email').eq('email', email).maybeSingle()
   if (!adminRow) return res.status(403).json({ error: 'not an admin' })
 
+  // Filter by date, not row count — the view has one row per day *per path*,
+  // so a row limit would truncate arbitrarily once several pages have traffic.
+  const since = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString()
   const { data, error } = await admin
     .from('pageviews_daily')
     .select('*')
-    .limit(90)
+    .gte('day', since)
+    .order('day', { ascending: false })
 
   if (error) return res.status(500).json({ error: error.message })
 

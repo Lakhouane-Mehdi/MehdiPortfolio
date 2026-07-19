@@ -259,7 +259,15 @@
     "sending": "Sending…",
     "success": "Thanks — your message has been sent.",
     "error_network": "Network error. Please try again.",
-    "error_generic": "Error"
+    "error_generic": "Error",
+    "error_invalid": "Please check your input and try again.",
+    "error_rate": "Too many messages — please wait a while and try again."
+  },
+  "consent": {
+    "aria_label": "Cookie settings",
+    "text_html": "This website uses technically necessary storage. With your consent, we additionally collect anonymous statistics (no cookies, no sharing with third parties) to improve the site. More in the <a href=\"/datenschutz.html\">privacy policy</a>.",
+    "reject": "Necessary only",
+    "accept": "Accept all"
   },
   "footer": {
     "copyright": "© 2026 Mehdi Lakhouane. Built with precision.",

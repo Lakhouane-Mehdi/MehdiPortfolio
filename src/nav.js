@@ -25,28 +25,35 @@ const sections = document.querySelectorAll('section');
 const navItems = document.querySelectorAll('.nav-links a');
 const progressBar = document.querySelector('.scroll-progress-bar');
 
+let scrollTicking = false;
 window.addEventListener('scroll', () => {
-    // Progress bar
-    if (progressBar) {
-        const scrollTotal = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scrollCurrent = document.documentElement.scrollTop;
-        progressBar.style.width = ((scrollCurrent / scrollTotal) * 100) + '%';
-    }
+    if (scrollTicking) return;
+    scrollTicking = true;
+    requestAnimationFrame(() => {
+        scrollTicking = false;
 
-    // Active nav link
-    let current = '';
-    sections.forEach(section => {
-        if (scrollY >= (section.offsetTop - 200)) {
-            current = section.getAttribute('id');
+        // Progress bar
+        if (progressBar) {
+            const scrollTotal = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollCurrent = document.documentElement.scrollTop;
+            progressBar.style.width = ((scrollCurrent / scrollTotal) * 100) + '%';
         }
+
+        // Active nav link
+        let current = '';
+        sections.forEach(section => {
+            if (scrollY >= (section.offsetTop - 200)) {
+                current = section.getAttribute('id');
+            }
+        });
+        navItems.forEach(item => {
+            item.classList.remove('active');
+            if (item.getAttribute('href').includes(current)) {
+                item.classList.add('active');
+            }
+        });
     });
-    navItems.forEach(item => {
-        item.classList.remove('active');
-        if (item.getAttribute('href').includes(current)) {
-            item.classList.add('active');
-        }
-    });
-});
+}, { passive: true });
 
 // Smooth Scroll for Hero Buttons (redundant with CSS scroll-behavior but good fallback)
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

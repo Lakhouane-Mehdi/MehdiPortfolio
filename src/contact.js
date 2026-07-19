@@ -31,9 +31,14 @@ if (form) {
         status.textContent = t('contact.success', 'Thanks — your message has been sent.')
         status.classList.add('success')
         form.reset()
+      } else if (res.status === 429) {
+        status.textContent = t('contact.error_rate', 'Too many messages — please wait a while and try again.')
+        status.classList.add('error')
+      } else if (res.status === 400) {
+        status.textContent = t('contact.error_invalid', 'Please check your input and try again.')
+        status.classList.add('error')
       } else {
-        const data = await res.json().catch(() => ({}))
-        status.textContent = data.error || `${t('contact.error_generic', 'Error')} ${res.status}`
+        status.textContent = `${t('contact.error_generic', 'Error')} ${res.status}`
         status.classList.add('error')
       }
     } catch (err) {

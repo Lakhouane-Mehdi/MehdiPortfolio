@@ -48,6 +48,20 @@ export default async function handler(req, res) {
     const session = hashSession(ip, ua)
 
     if (family === 'bot') return res.status(204).end()
+    if (type !== 'consent' && type !== 'pageview') {
+      return res.status(400).json({ error: 'unknown type' })
+    }
+
+    // Rate limit per session to keep scripted POSTs from flooding the tables.
+    const table = type === 'consent' ? 'consent_log' : 'pageviews'
+    const limit = type === 'consent' ? 10 : 60
+    const since = new Date(Date.now() - 60 * 60 * 1000).toISOString()
+    const { count } = await admin
+      .from(table)
+      .select('*', { count: 'exact', head: true })
+      .eq('session_hash', session)
+      .gte('created_at', since)
+    if ((count ?? 0) >= limit) return res.status(429).end()
 
     if (type === 'consent') {
       await admin.from('consent_log').insert({
@@ -72,8 +86,6 @@ export default async function handler(req, res) {
       })
       return res.status(204).end()
     }
-
-    return res.status(400).json({ error: 'unknown type' })
   } catch (err) {
     console.error('track error', err)
     return res.status(500).json({ error: 'server error' })

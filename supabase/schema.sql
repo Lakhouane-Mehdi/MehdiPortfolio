@@ -36,6 +36,12 @@ from public.pageviews
 group by 1, 2
 order by 1 desc;
 
+-- Without security_invoker, the view runs with its owner's privileges and
+-- bypasses the RLS on pageviews — making the aggregates readable through the
+-- public REST API with just the anon key. Lock it down:
+alter view public.pageviews_daily set (security_invoker = on);
+revoke select on public.pageviews_daily from anon, authenticated;
+
 -- ============================================================
 -- 3. ADMIN ALLOWLIST (only this email can sign in to admin panel)
 -- ============================================================
