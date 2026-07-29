@@ -1167,3 +1167,26 @@ blockquote {
         padding-left: 2.5rem;
     }
 }
+
+/* Respect the OS "reduce motion" setting: keep everything usable, drop the movement */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .project-card:hover,
+    .project-card.main-project:hover,
+    .gallery-item:hover {
+        transform: none;
+    }
+
+    .card-inner {
+        transition: none;
+    }
+}
