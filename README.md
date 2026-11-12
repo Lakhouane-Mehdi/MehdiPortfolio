@@ -51,7 +51,7 @@ npm run preview   # preview that build locally
 | `POST /api/track` | Pageview events (consent required) |
 | `GET /api/stats` | Aggregate analytics (admin) |
 | `GET /api/messages` | Read contact messages (admin) |
-| `GET /api/keepalive` | Twice-weekly cron so the free Supabase tier doesn't pause |
+| `GET /api/keepalive` | Daily cron: keeps the free Supabase tier awake and deletes expired data |
 
 Admin routes verify a Supabase JWT server-side. The service-role key stays on
 the server and is never exposed to the browser.

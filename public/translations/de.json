@@ -302,7 +302,7 @@
     "h3": "3. Erhobene Daten beim Besuch der Website (Server-Logs)",
     "p3": "Beim Aufruf dieser Website werden durch unseren Hoster technisch notwendige Daten verarbeitet (IP-Adresse, Zeitstempel, aufgerufene URL, Referrer, User-Agent). Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einem sicheren Betrieb). Diese Logs werden kurzfristig zu Sicherheitszwecken gespeichert.",
     "h4": "4. Technisch notwendige Speicherung (§ 25 Abs. 2 TTDSG / TDDDG)",
-    "p4": "Wir speichern im lokalen Speicher Ihres Browsers ausschließlich Ihre Cookie-Einwilligungsentscheidung. Diese Speicherung ist unbedingt erforderlich, damit wir Ihren Wunsch respektieren und das Banner nicht erneut anzeigen. Eine Einwilligung ist hierfür nicht nötig.",
+    "p4": "Wir speichern im lokalen Speicher Ihres Browsers ausschließlich Ihre Cookie-Einwilligungsentscheidung sowie – nur wenn Sie die Sprache selbst über die Schaltfläche umstellen – Ihre Sprachwahl. Diese Speicherung ist unbedingt erforderlich, damit wir Ihre Auswahl respektieren, das Banner nicht erneut anzeigen und die Seite in der von Ihnen gewählten Sprache anzeigen. Eine Einwilligung ist hierfür nicht nötig.",
     "h5": "5. Reichweitenmessung (mit Einwilligung)",
     "p5_html": "Nur bei ausdrücklicher Einwilligung (Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1 TTDSG) erfassen wir anonyme Statistiken über Seitenaufrufe. Wir verwenden <strong>keine Tracking-Cookies</strong> und geben keine Daten an Dritte weiter.",
     "p5_label": "Erhoben werden:",
@@ -326,7 +326,7 @@
     "p9b_btn": "Einwilligung widerrufen",
     "p9c": "Beschwerderecht bei einer Aufsichtsbehörde (Art. 77 DSGVO): zuständig ist der Hessische Beauftragte für Datenschutz und Informationsfreiheit.",
     "h10": "10. Stand",
-    "p10": "Diese Datenschutzerklärung hat den Stand 15.04.2026."
+    "p10": "Diese Datenschutzerklärung hat den Stand 12.11.2026."
   },
   "screenshots": {
     "back": "Zurück zum Portfolio",

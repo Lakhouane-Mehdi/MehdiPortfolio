@@ -27,24 +27,41 @@ function uaFamily(ua = '') {
   return 'Other'
 }
 
-const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+// Besides whitespace and a second "@", this rejects ? & # % < > " — characters
+// that would let an address smuggle extra fields (e.g. a hidden BCC) into the
+// admin's mailto: reply link.
+const EMAIL_RE = /^[^\s@?&#%<>"]+@[^\s@?&#%<>"]+\.[^\s@?&#%<>"]+$/
+
+function parseBody(body) {
+  if (typeof body !== 'string') return body
+  try { return JSON.parse(body) } catch { return null }
+}
+
+function cleanString(value) {
+  return typeof value === 'string' ? value.trim() : ''
+}
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
 
   try {
-    const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body
-    const { name, email, message, website, consent } = body || {}
+    const body = parseBody(req.body)
+    const { website, consent } = body && typeof body === 'object' ? body : {}
+
+    // Validate the trimmed values — that is what gets stored.
+    const name = cleanString(body?.name)
+    const email = cleanString(body?.email).toLowerCase()
+    const message = cleanString(body?.message)
 
     if (website) return res.status(204).end()
-    if (!consent) return res.status(400).json({ error: 'consent required' })
-    if (!name || typeof name !== 'string' || name.length < 2 || name.length > 100) {
+    if (consent !== true) return res.status(400).json({ error: 'consent required' })
+    if (name.length < 2 || name.length > 100) {
       return res.status(400).json({ error: 'invalid name' })
     }
-    if (!email || !EMAIL_RE.test(email) || email.length > 200) {
+    if (email.length > 200 || !EMAIL_RE.test(email)) {
       return res.status(400).json({ error: 'invalid email' })
     }
-    if (!message || typeof message !== 'string' || message.length < 10 || message.length > 5000) {
+    if (message.length < 10 || message.length > 5000) {
       return res.status(400).json({ error: 'invalid message' })
     }
 
@@ -57,20 +74,25 @@ export default async function handler(req, res) {
     if (family === 'bot') return res.status(204).end()
 
     const since = new Date(Date.now() - 60 * 60 * 1000).toISOString()
-    const { count } = await admin
+    const { count, error: countError } = await admin
       .from('messages')
       .select('*', { count: 'exact', head: true })
       .eq('ip_hash', ipHash)
       .gte('created_at', since)
 
-    if ((count ?? 0) >= 3) {
+    // If the limit can't be checked, don't write — never fail open.
+    if (countError || typeof count !== 'number') {
+      console.error('contact rate-limit check failed', countError)
+      return res.status(503).json({ error: 'temporarily unavailable' })
+    }
+    if (count >= 3) {
       return res.status(429).json({ error: 'too many messages, please wait' })
     }
 
     const { error } = await admin.from('messages').insert({
-      name: name.trim(),
-      email: email.trim().toLowerCase(),
-      message: message.trim(),
+      name,
+      email,
+      message,
       country,
       user_agent_family: family,
       ip_hash: ipHash

@@ -302,7 +302,7 @@
     "h3": "3. Data collected when visiting the website (server logs)",
     "p3": "When this website is accessed, technically necessary data (IP address, timestamp, URL accessed, referrer, user agent) is processed by our host. The legal basis is Art. 6(1)(f) GDPR (legitimate interest in secure operation). These logs are stored for a short time for security purposes.",
     "h4": "4. Technically necessary storage (§ 25(2) TTDSG / TDDDG)",
-    "p4": "We only store your cookie consent decision in your browser's local storage. This storage is strictly necessary to respect your choice and not show the banner again. No consent is required.",
+    "p4": "In your browser's local storage we only store your cookie consent decision and – only if you switch the language yourself using the button – your language choice. This storage is strictly necessary to respect your choices, not show the banner again and display the site in the language you selected. No consent is required.",
     "h5": "5. Reach measurement (with consent)",
     "p5_html": "Only with your explicit consent (Art. 6(1)(a) GDPR, § 25(1) TTDSG) do we collect anonymous statistics about page views. We use <strong>no tracking cookies</strong> and share no data with third parties.",
     "p5_label": "Collected:",
@@ -326,7 +326,7 @@
     "p9b_btn": "Withdraw consent",
     "p9c": "Right to lodge a complaint with a supervisory authority (Art. 77 GDPR): the competent authority is the Hessian Commissioner for Data Protection and Freedom of Information.",
     "h10": "10. Status",
-    "p10": "This privacy policy is dated 15.04.2026."
+    "p10": "This privacy policy is dated 12.11.2026."
   },
   "screenshots": {
     "back": "Back to Portfolio",

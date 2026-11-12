@@ -2,11 +2,19 @@ import { supabase } from './supabase.js'
 
 const loginCard = document.getElementById('login-card')
 const dashboard = document.getElementById('dashboard')
+const dashBody = document.getElementById('dash-body')
+const dashMsg = document.getElementById('dash-msg')
 const loginMsg = document.getElementById('login-msg')
 const who = document.getElementById('who')
 
-function escapeHtml(s = '') {
-  return s.replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]))
+function escapeHtml(s) {
+  return String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]))
+}
+
+// Percent-encode everything except the "@", so an address can never add
+// extra mailto fields (?bcc=…, &body=…) to the reply link.
+function mailtoHref(email) {
+  return 'mailto:' + encodeURIComponent(String(email ?? '')).replace(/%40/g, '@')
 }
 
 // Always fetch with a fresh access token — a token captured at render time
@@ -23,10 +31,15 @@ async function authFetch(url, opts = {}) {
 async function loadMessages() {
   const res = await authFetch('/api/messages')
   if (!res.ok) throw new Error(`messages ${res.status}`)
-  const { messages } = await res.json()
+  const payload = await res.json()
+  const messages = payload.messages || []
+  const total = payload.total ?? messages.length
+  const unread = payload.unread ?? messages.filter(m => !m.read_at).length
   const list = document.getElementById('messages-list')
-  const unread = messages.filter(m => !m.read_at).length
-  document.getElementById('msg-count').textContent = `(${messages.length} total, ${unread} unread)`
+
+  let summary = `(${total} total, ${unread} unread)`
+  if (total > messages.length) summary += ` — showing the newest ${messages.length}`
+  document.getElementById('msg-count').textContent = summary
 
   list.innerHTML = ''
   if (messages.length === 0) {
@@ -34,20 +47,21 @@ async function loadMessages() {
     return
   }
   for (const m of messages) {
+    const id = Number(m.id)
     const div = document.createElement('div')
     div.className = 'msg' + (m.read_at ? '' : ' unread')
     const when = new Date(m.created_at).toLocaleString()
     div.innerHTML = `
       <div class="meta">
         <strong>${escapeHtml(m.name)}</strong>
-        <a href="mailto:${escapeHtml(m.email)}">${escapeHtml(m.email)}</a>
-        <span>${when}</span>
+        <a href="${escapeHtml(mailtoHref(m.email))}">${escapeHtml(m.email)}</a>
+        <span>${escapeHtml(when)}</span>
         ${m.country ? `<span>${escapeHtml(m.country)}</span>` : ''}
       </div>
       <div class="body">${escapeHtml(m.message)}</div>
       <div class="actions">
-        ${m.read_at ? '' : `<button data-read="${m.id}">Mark read</button>`}
-        <button data-delete="${m.id}">Delete</button>
+        ${m.read_at ? '' : `<button data-read="${id}">Mark read</button>`}
+        <button data-delete="${id}">Delete</button>
       </div>
     `
     list.appendChild(div)
@@ -81,12 +95,16 @@ async function loadMessages() {
 async function renderDashboard(session) {
   loginCard.classList.add('hidden')
   dashboard.classList.remove('hidden')
+  dashBody.classList.remove('hidden')
+  dashMsg.textContent = ''
   who.textContent = `Signed in as ${session.user.email}`
 
   try {
     const res = await authFetch('/api/stats')
     if (res.status === 403) {
-      dashboard.innerHTML = '<p>Your account is not allow-listed as admin.</p>'
+      // Hide only the data — the Sign out button above must stay usable.
+      dashBody.classList.add('hidden')
+      dashMsg.textContent = 'Your account is not allow-listed as admin.'
       return
     }
     if (!res.ok) throw new Error(`stats ${res.status}`)
@@ -108,17 +126,29 @@ async function renderDashboard(session) {
     await loadMessages()
   } catch (err) {
     console.error(err)
-    dashboard.insertAdjacentHTML('beforeend', `<p class="muted">Failed to load: ${err.message}</p>`)
+    dashMsg.textContent = `Failed to load: ${err.message}`
   }
 }
 
-async function init() {
-  const { data: { session } } = await supabase.auth.getSession()
-  if (session) renderDashboard(session)
+// Supabase reports the same signed-in user several times (on page load, on
+// every hourly token refresh, when the tab regains focus). Render once per user.
+let renderedUserId = null
 
+function onSession(session) {
+  if (!session || session.user.id === renderedUserId) return
+  renderedUserId = session.user.id
+  renderDashboard(session)
+}
+
+async function init() {
+  // Deferred with setTimeout: Supabase calls must not run inside its own
+  // auth-change callback.
   supabase.auth.onAuthStateChange((_event, session) => {
-    if (session) renderDashboard(session)
+    setTimeout(() => onSession(session), 0)
   })
+
+  const { data: { session } } = await supabase.auth.getSession()
+  onSession(session)
 }
 
 document.getElementById('send-link').addEventListener('click', async () => {

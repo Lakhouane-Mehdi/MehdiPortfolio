@@ -9,12 +9,14 @@ function pickInitialLang() {
     const stored = localStorage.getItem(STORAGE_KEY)
     if (stored && SUPPORTED.includes(stored)) return stored
   } catch {}
-  const htmlLang = document.documentElement.getAttribute('lang')
-  if (htmlLang && SUPPORTED.includes(htmlLang.toLowerCase().slice(0, 2))) {
-    return htmlLang.toLowerCase().slice(0, 2)
+  // No saved choice: follow the browser's language list. (The <html lang>
+  // attribute is always set, so checking it first would hide the browser's
+  // preference and German visitors would never get German.)
+  const preferred = navigator.languages?.length ? navigator.languages : [navigator.language || '']
+  for (const tag of preferred) {
+    const code = String(tag).toLowerCase().slice(0, 2)
+    if (SUPPORTED.includes(code)) return code
   }
-  const nav = (navigator.language || '').toLowerCase().slice(0, 2)
-  if (SUPPORTED.includes(nav)) return nav
   return DEFAULT_LANG
 }
 
@@ -62,9 +64,13 @@ function applyTranslations(dict) {
   }
 }
 
-export async function setLang(lang) {
+// persist: remember the language for later visits. Only done when the visitor
+// picks one — an automatic guess is not saved, so it can't lock anyone in.
+export async function setLang(lang, { persist = true } = {}) {
   if (!SUPPORTED.includes(lang)) lang = DEFAULT_LANG
-  try { localStorage.setItem(STORAGE_KEY, lang) } catch {}
+  if (persist) {
+    try { localStorage.setItem(STORAGE_KEY, lang) } catch {}
+  }
   document.documentElement.setAttribute('lang', lang)
   const dict = await loadDict(lang)
   applyTranslations(dict)
@@ -74,12 +80,10 @@ export async function setLang(lang) {
   document.dispatchEvent(new CustomEvent('i18n:changed', { detail: { lang } }))
 }
 
+// The language currently shown on this page (setLang keeps <html lang> in sync).
 export function getLang() {
-  try {
-    const stored = localStorage.getItem(STORAGE_KEY)
-    if (stored && SUPPORTED.includes(stored)) return stored
-  } catch {}
-  return document.documentElement.getAttribute('lang') || DEFAULT_LANG
+  const lang = (document.documentElement.getAttribute('lang') || '').toLowerCase().slice(0, 2)
+  return SUPPORTED.includes(lang) ? lang : DEFAULT_LANG
 }
 
 export function t(key, fallback = '') {
@@ -90,7 +94,7 @@ export function t(key, fallback = '') {
 
 export async function initI18n() {
   const lang = pickInitialLang()
-  await setLang(lang)
+  await setLang(lang, { persist: false })
   document.querySelectorAll('[data-lang-btn]').forEach(btn => {
     btn.addEventListener('click', () => {
       const target = btn.getAttribute('data-lang-btn')

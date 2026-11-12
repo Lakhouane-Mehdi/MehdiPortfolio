@@ -211,9 +211,14 @@
         <p class="lb-hint" data-i18n="screenshots.close_hint">Press Esc or click outside to close</p>
     </div>
 
+    <link rel="stylesheet" href="/src/consent.css">
     <script type="module">
+        import { initConsent } from '/src/consent.js'
         import { initI18n } from '/src/i18n.js'
-        initI18n().catch(err => console.warn('i18n init failed:', err))
+        // Same consent banner + opt-in pageview tracking as the other pages.
+        initI18n()
+            .catch(err => console.warn('i18n init failed:', err))
+            .finally(initConsent)
 
         const lb = document.getElementById('lb');
         const lbImg = lb.querySelector('img');

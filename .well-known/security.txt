@@ -1,4 +1,0 @@
-Contact: mailto:Mehdilakhouane24@gmail.com
-Expires: 2026-12-31T23:59:00.000Z
-Preferred-Languages: en, de, fr
-Policy: https://mehdi-portfolio-kappa.vercel.app/security

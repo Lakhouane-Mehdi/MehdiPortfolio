@@ -57,21 +57,25 @@
         <button id="signout" type="button">Sign out</button>
       </div>
 
-      <div class="row stats">
-        <div>
-          <div class="muted">Total pageviews</div>
-          <div id="total" class="stat">–</div>
+      <p id="dash-msg" class="muted" role="status"></p>
+
+      <div id="dash-body">
+        <div class="row stats">
+          <div>
+            <div class="muted">Total pageviews</div>
+            <div id="total" class="stat">–</div>
+          </div>
         </div>
+
+        <h3 class="section-heading">Daily breakdown</h3>
+        <table id="daily-table">
+          <thead><tr><th>Day</th><th>Path</th><th>Views</th><th>Unique</th></tr></thead>
+          <tbody></tbody>
+        </table>
+
+        <h3 class="section-heading messages">Messages <span id="msg-count" class="muted"></span></h3>
+        <div id="messages-list"></div>
       </div>
-
-      <h3 class="section-heading">Daily breakdown</h3>
-      <table id="daily-table">
-        <thead><tr><th>Day</th><th>Path</th><th>Views</th><th>Unique</th></tr></thead>
-        <tbody></tbody>
-      </table>
-
-      <h3 class="section-heading messages">Messages <span id="msg-count" class="muted"></span></h3>
-      <div id="messages-list"></div>
     </section>
   </main>
 
