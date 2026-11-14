@@ -1,3 +1,4 @@
+/* Colours come from the theme tokens in /style.css (light by default, dark on toggle). */
 #consent-banner {
   position: fixed;
   left: 1rem;
@@ -5,19 +6,19 @@
   bottom: 1rem;
   max-width: 640px;
   margin: 0 auto;
-  background: #1a1a1a;
-  color: #f5f5f5;
-  border: 1px solid #333;
+  background: var(--surface, #fff);
+  color: var(--ink, #17181a);
+  border: 1px solid var(--ink, #17181a);
   border-radius: 12px;
   padding: 1.25rem 1.5rem;
   z-index: 9999;
   font-family: 'Inter', system-ui, sans-serif;
   font-size: 0.9rem;
   line-height: 1.5;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.22);
 }
 
-#consent-banner a { color: #8ab4ff; text-decoration: underline; }
+#consent-banner a { color: var(--accent, #1f5c44); text-decoration: underline; }
 
 #consent-banner .consent-actions {
   display: flex;
@@ -26,53 +27,56 @@
   flex-wrap: wrap;
 }
 
+/* Both choices look equally strong on purpose: rejecting must be as easy as accepting. */
 #consent-banner button {
   padding: 0.55rem 1.1rem;
   border-radius: 8px;
-  border: 1px solid #444;
+  border: 1px solid var(--ink, #17181a);
   background: transparent;
-  color: #f5f5f5;
+  color: var(--ink, #17181a);
   font-size: 0.9rem;
+  font-weight: 600;
   cursor: pointer;
   font-family: inherit;
 }
 
 #consent-banner button.primary {
-  background: #2a6df4;
-  border-color: #2a6df4;
+  background: var(--ink, #17181a);
+  color: var(--bg, #f7f5f0);
 }
 
-#consent-banner button:hover { filter: brightness(1.15); }
+#consent-banner button:hover { opacity: 0.85; }
 
 .revoke-btn {
   padding: 0.4rem 0.8rem;
   border-radius: 6px;
-  border: 1px solid #444;
-  background: #222;
-  color: #fff;
+  border: 1px solid var(--ink, #17181a);
+  background: var(--surface, #fff);
+  color: var(--ink, #17181a);
   cursor: pointer;
   font: inherit;
 }
-.revoke-btn:hover { filter: brightness(1.2); }
+.revoke-btn:hover { background: var(--surface-2, #efece4); }
 
 .footer-legal {
   text-align: center;
   padding: 1.5rem 1rem;
-  color: #888;
+  color: var(--muted, #5d6066);
   font-size: 0.85rem;
-  border-top: 1px solid #2a2a2a;
+  border-top: 1px solid var(--line, #dcd8cd);
   margin-top: 2rem;
 }
 .footer-legal a, .footer-legal button {
-  color: #8ab4ff;
+  color: var(--muted, #5d6066);
   background: none;
   border: none;
-  padding: 0 0.3rem;
+  display: inline-block;
+  padding: 0.5rem 0.3rem;
   cursor: pointer;
   font: inherit;
   text-decoration: underline;
 }
-.footer-legal a:hover, .footer-legal button:hover { color: #b8d1ff; }
+.footer-legal a:hover, .footer-legal button:hover { color: var(--ink, #17181a); }
 
 button.link-like {
   background: none;
